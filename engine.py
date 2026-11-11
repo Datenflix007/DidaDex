@@ -17,6 +17,7 @@ import tempfile
 import threading
 import time
 import webbrowser
+from datetime import datetime
 from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
@@ -36,11 +37,11 @@ CRAWLER_FALLBACK = ('requests>=2.31,<3', 'beautifulsoup4>=4.12,<5',
 VIEWER_FALLBACK = ('streamlit>=1.35', 'pandas>=2.0')
 
 PRESETS = {
-    'TEST': {'runtime_minutes': 10, 'max_pages': 2500, 'max_depth': 15, 'workers': 5,
+    'TEST': {'runtime_minutes': 10, 'max_pages': 2500, 'max_depth': 50, 'workers': 5,
              'max_per_host': 400, 'max_queue': 40000},
-    'STANDARD': {'runtime_minutes': 180, 'max_pages': 25000, 'max_depth': 25, 'workers': 6,
+    'STANDARD': {'runtime_minutes': 180, 'max_pages': 25000, 'max_depth': 50, 'workers': 6,
                  'max_per_host': 7000, 'max_queue': 150000},
-    'NACHT': {'runtime_minutes': 720, 'max_pages': 250000, 'max_depth': 40, 'workers': 8,
+    'NACHT': {'runtime_minutes': 720, 'max_pages': 250000, 'max_depth': 50, 'workers': 8,
               'max_per_host': 50000, 'max_queue': 500000},
 }
 
@@ -55,11 +56,13 @@ def config_source(config: dict) -> str:
         f'RUN_NAME = {cfg["run_name"]!r}', f'TARGET_MIB = {int(cfg["target_mib"])}',
     ]
     for key in ('DOWNLOAD_MATERIALS', 'ONLY_OPEN_LICENSE_MATERIALS', 'CHECK_LICENSE_IN_PDFS',
-                'SITEMAPS_AKTIV', 'QUELLEN_UEBERGREIFEND', 'STORE_BINARY_MATERIALS'):
+                'SITEMAPS_AKTIV', 'QUELLEN_UEBERGREIFEND', 'STORE_BINARY_MATERIALS', 'DYNAMIC_DEPTH', 'FAIR_HOST_SCHEDULING', 'INCLUDE_GENERAL_METHODS'):
         lines.append(f'{key} = {bool(cfg[key])!r}')
     for key in ('MIN_TEXT_CHARS', 'MAX_MATERIAL_MIB', 'MAX_TEXT_CHARS'):
         lines.append(f'{key} = {int(cfg[key])!r}')
-    lines.extend([f'DOWNLOAD_DELAY_SECONDS = {float(cfg["DOWNLOAD_DELAY_SECONDS"])!r}',
+    lines.append(f'SUBJECT_FILTER = {cfg["subjects"]!r}')
+    lines.extend(['DEPTH_SOFT_START = 5', 'DEPTH_HARD_LIMIT = 50',
+                  'DEPTH_HEATMAP_INTERVAL = 30',f'DOWNLOAD_DELAY_SECONDS = {float(cfg["DOWNLOAD_DELAY_SECONDS"])!r}',
                   f'PROFILE = {profile!r}',
                   'print(f"Konfiguration: {MODUS}, {PROFILE[\'runtime_minutes\']} min, Ziel {TARGET_MIB} MiB", flush=True)'])
     return '\n'.join(lines) + '\n'
@@ -137,11 +140,11 @@ class DidaDex(tk.Tk):
         self.active_profile = None
         self._last_error = ''
         self.mode = tk.StringVar(value='TEST')
-        self.run_name = tk.StringVar(value='tiefencrawl_test')
+        self.run_name = tk.StringVar(value=datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
         self.notebook_path = tk.StringVar(value=str(DEFAULT_NOTEBOOK))
         self.runtime = tk.IntVar(value=10)
         self.pages = tk.IntVar(value=2500)
-        self.depth = tk.IntVar(value=15)
+        self.depth = tk.IntVar(value=50)
         self.workers = tk.IntVar(value=5)
         self.per_host = tk.IntVar(value=400)
         self.queue_limit = tk.IntVar(value=40000)
@@ -156,6 +159,14 @@ class DidaDex(tk.Tk):
         self.sitemaps = tk.BooleanVar(value=True)
         self.cross_hosts = tk.BooleanVar(value=True)
         self.save_binary = tk.BooleanVar(value=False)
+        self.dynamic_depth = tk.BooleanVar(value=True)
+        self.fair_hosts = tk.BooleanVar(value=True)
+        self.include_general_methods = tk.BooleanVar(value=True)
+        self.subject_flags = {name: tk.BooleanVar(value=False) for name in (
+            'Informatik','Geschichte','Deutsch','Mathematik','Physik','Chemie','Biologie',
+            'Geographie','Ethik','Politik','Englisch','Kunst','Musik','Religion','Sport',
+            'Sachunterricht','Medienbildung')}
+
         self.status = tk.StringVar(value='Bereit')
         self.step = tk.StringVar(value='Noch kein Lauf gestartet')
         self.metrics = tk.StringVar(value='Abrufe: 0  |  Dokumente: 0  |  Korpus: 0 MiB')
@@ -219,11 +230,20 @@ class DidaDex(tk.Tk):
         for c, (title, var) in enumerate(checks):
             ttk.Checkbutton(config, text=title, variable=var).grid(row=4+c//3, column=(c%3)*2,
                                                                    columnspan=2, sticky='w', pady=3)
-        ttk.Label(config, text='Notebook').grid(row=6, column=0, sticky='w', pady=(8, 0))
-        ttk.Entry(config, textvariable=self.notebook_path).grid(row=6, column=1, columnspan=6, sticky='ew', pady=(8, 0))
-        ttk.Button(config, text='Auswählen', command=self._select_notebook).grid(row=6, column=7, sticky='ew', pady=(8, 0))
+        subjects_frame=ttk.LabelFrame(config,text='Fächerauswahl – keine Auswahl = alle Fächer',padding=7)
+        subjects_frame.grid(row=6,column=0,columnspan=8,sticky='ew',pady=(8,0))
+        for idx,(name,flag) in enumerate(self.subject_flags.items()):
+            ttk.Checkbutton(subjects_frame,text=name,variable=flag).grid(row=idx//6,column=idx%6,sticky='w',padx=7,pady=2)
+        options_frame=ttk.Frame(config)
+        options_frame.grid(row=7,column=0,columnspan=8,sticky='ew')
+        ttk.Checkbutton(options_frame,text='Dynamische Tiefe bis 50',variable=self.dynamic_depth).pack(side='left',padx=5)
+        ttk.Checkbutton(options_frame,text='Faire Host-Verteilung',variable=self.fair_hosts).pack(side='left',padx=5)
+        ttk.Checkbutton(options_frame,text='Allgemeine Methoden einbeziehen',variable=self.include_general_methods).pack(side='left',padx=5)
+        ttk.Label(config, text='Notebook').grid(row=8, column=0, sticky='w', pady=(8, 0))
+        ttk.Entry(config, textvariable=self.notebook_path).grid(row=8, column=1, columnspan=6, sticky='ew', pady=(8, 0))
+        ttk.Button(config, text='Auswählen', command=self._select_notebook).grid(row=8, column=7, sticky='ew', pady=(8, 0))
         bar = ttk.Frame(config)
-        bar.grid(row=7, column=0, columnspan=8, sticky='ew', pady=(10, 0))
+        bar.grid(row=9, column=0, columnspan=8, sticky='ew', pady=(10, 0))
         self.start_btn = ttk.Button(bar, text='Crawler starten', command=self.start_crawl)
         self.start_btn.pack(side='left', padx=(0, 8))
         self.stop_btn = ttk.Button(bar, text='Sauber stoppen und exportieren', command=self.stop_crawl, state='disabled')
@@ -271,8 +291,7 @@ class DidaDex(tk.Tk):
                                ('max_depth', self.depth), ('workers', self.workers),
                                ('max_per_host', self.per_host), ('max_queue', self.queue_limit)):
             variable.set(profile[name])
-        self.run_name.set({'TEST': 'tiefencrawl_test', 'STANDARD': 'tiefencrawl_standard',
-                           'NACHT': 'tiefencrawl_nacht'}[self.mode.get()])
+        self.run_name.set(datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
 
     def _select_notebook(self):
         value = filedialog.askopenfilename(title='Crawler-Notebook auswählen',
@@ -292,11 +311,16 @@ class DidaDex(tk.Tk):
                  MAX_TEXT_CHARS=self.max_chars.get(), MAX_MATERIAL_MIB=self.max_material.get(),
                  DOWNLOAD_MATERIALS=self.download.get(), ONLY_OPEN_LICENSE_MATERIALS=self.license_only.get(),
                  CHECK_LICENSE_IN_PDFS=self.license_pdf.get(), SITEMAPS_AKTIV=self.sitemaps.get(),
-                 QUELLEN_UEBERGREIFEND=self.cross_hosts.get(), STORE_BINARY_MATERIALS=self.save_binary.get())
+                 QUELLEN_UEBERGREIFEND=self.cross_hosts.get(), STORE_BINARY_MATERIALS=self.save_binary.get(),
+                 DYNAMIC_DEPTH=self.dynamic_depth.get(), FAIR_HOST_SCHEDULING=self.fair_hosts.get(),
+                 INCLUDE_GENERAL_METHODS=self.include_general_methods.get(),
+                 subjects=[name for name,flag in self.subject_flags.items() if flag.get()])
         for k in ('target_mib', 'runtime_minutes', 'max_pages', 'max_depth', 'workers',
                   'max_per_host', 'max_queue', 'MIN_TEXT_CHARS', 'MAX_TEXT_CHARS', 'MAX_MATERIAL_MIB'):
             if d[k] < (0 if k == 'max_depth' else 1):
                 raise ValueError(f'{k} muss positiv sein (Tiefe darf 0 sein).')
+        if not 0 <= d['max_depth'] <= 50:
+            raise ValueError('Die maximale Tiefe darf 50 nicht überschreiten.')
         if not 0 <= d['DOWNLOAD_DELAY_SECONDS'] <= 300:
             raise ValueError('Pause/Host muss zwischen 0 und 300 Sekunden liegen.')
         if d['mode'] == 'TEST' and d['runtime_minutes'] > 10:
@@ -341,7 +365,7 @@ class DidaDex(tk.Tk):
         self.status.set('Initialisierung ...')
         self.step.set('Virtuelle Umgebung und Abhängigkeiten prüfen')
         self.metrics.set('Abrufe: 0  |  Dokumente: 0  |  Korpus: 0 MiB')
-        self._append_log(f'--- START: {cfg["mode"]} / {cfg["run_name"]} ---')
+        self._append_log(f'--- START: {cfg["mode"]} / {cfg["run_name"]} | Fächer: {cfg["subjects"] or ["Alle"]} ---')
         threading.Thread(target=self._run_crawler, args=(script,), daemon=True).start()
 
     def _run_cmd(self, args, cwd, label, env=None):
