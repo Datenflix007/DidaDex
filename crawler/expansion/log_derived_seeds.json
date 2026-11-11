@@ -1,0 +1,3782 @@
+[
+  {
+    "url": "https://unterrichten.zum.de/wiki/Unterrichtsideen",
+    "host": "unterrichten.zum.de",
+    "group": "legacy_unterrichten_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://deutsch-lernen.zum.de/wiki/Unterrichtsmethoden",
+    "host": "deutsch-lernen.zum.de",
+    "group": "legacy_deutsch_lernen_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.umwelt-im-unterricht.de/",
+    "host": "www.umwelt-im-unterricht.de",
+    "group": "legacy_umwelt_im_unterricht_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.lmz-bw.de/",
+    "host": "www.lmz-bw.de",
+    "group": "legacy_lmz_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://de.serlo.org/",
+    "host": "de.serlo.org",
+    "group": "legacy_de_serlo_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.isb.bayern.de/",
+    "host": "www.isb.bayern.de",
+    "group": "legacy_isb_bayern_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://segu-geschichte.de/",
+    "host": "segu-geschichte.de",
+    "group": "legacy_segu_geschichte_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://edulabs.de/oer",
+    "host": "edulabs.de",
+    "group": "legacy_edulabs_de",
+    "allow_paths": [
+      "/oer"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.planet-schule.de/index.html",
+    "host": "www.planet-schule.de",
+    "group": "legacy_planet_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://lehrerfortbildung-bw.de/u_matnatech",
+    "host": "lehrerfortbildung-bw.de",
+    "group": "legacy_lehrerfortbildung_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medien-in-die-schule.de/unterrichtseinheiten",
+    "host": "www.medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildungsserver.berlin-brandenburg.de/unterrichtsmaterialien",
+    "host": "bildungsserver.berlin-brandenburg.de",
+    "group": "legacy_bildungsserver_berlin_brandenburg_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://lernarchiv.bildung.hessen.de/",
+    "host": "lernarchiv.bildung.hessen.de",
+    "group": "legacy_lernarchiv_bildung_hessen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.kinofenster.de/unterrichten",
+    "host": "www.kinofenster.de",
+    "group": "legacy_kinofenster_de",
+    "allow_paths": [
+      "/unterricht"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bildung-lsa.de/informationsportal/schule/schulentwicklung/digitalassistenz/freie_bildungsmaterialien.htm",
+    "host": "www.bildung-lsa.de",
+    "group": "legacy_bildung_lsa_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://medienportal.siemens-stiftung.org/de/home",
+    "host": "medienportal.siemens-stiftung.org",
+    "group": "legacy_medienportal_siemens_stiftung_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://zsl-bw.de/",
+    "host": "zsl-bw.de",
+    "group": "legacy_zsl_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.mebis.bayern.de/",
+    "host": "www.mebis.bayern.de",
+    "group": "legacy_mebis_bayern_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://lisum.berlin-brandenburg.de/",
+    "host": "lisum.berlin-brandenburg.de",
+    "group": "legacy_lisum_berlin_brandenburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.berlin.de/sen/bildung",
+    "host": "www.berlin.de",
+    "group": "legacy_berlin_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.lis.bremen.de/",
+    "host": "www.lis.bremen.de",
+    "group": "legacy_lis_bremen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://digitallearninglab.de/unterrichtsbausteine",
+    "host": "digitallearninglab.de",
+    "group": "legacy_digitallearninglab_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.klicksafe.de/materialien",
+    "host": "www.klicksafe.de",
+    "group": "legacy_klicksafe_de",
+    "allow_paths": [
+      "/materialien"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bildungsserver.de/schule/unterricht-634-de.html",
+    "host": "www.bildungsserver.de",
+    "group": "legacy_bildungsserver_de",
+    "allow_paths": [
+      "/schule/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://li.hamburg.de/",
+    "host": "li.hamburg.de",
+    "group": "legacy_li_hamburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.schule-bw.de/",
+    "host": "www.schule-bw.de",
+    "group": "legacy_schule_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://kultus.hessen.de/",
+    "host": "kultus.hessen.de",
+    "group": "legacy_kultus_hessen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bildung-mv.de/",
+    "host": "www.bildung-mv.de",
+    "group": "legacy_bildung_mv_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://mbjs.brandenburg.de/",
+    "host": "mbjs.brandenburg.de",
+    "group": "legacy_mbjs_brandenburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bpb.de/lernen/angebote",
+    "host": "www.bpb.de",
+    "group": "legacy_bpb_de",
+    "allow_paths": [
+      "/lernen/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildung.rlp.de/unterricht",
+    "host": "bildung.rlp.de",
+    "group": "legacy_bildung_rlp_de",
+    "allow_paths": [
+      "/unterricht"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.hamburg.de/bildung",
+    "host": "www.hamburg.de",
+    "group": "legacy_hamburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildungsserver.hamburg.de/",
+    "host": "bildungsserver.hamburg.de",
+    "group": "legacy_bildungsserver_hamburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medienanstalt-mv.de/",
+    "host": "www.medienanstalt-mv.de",
+    "group": "legacy_medienanstalt_mv_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.nibis.de/",
+    "host": "www.nibis.de",
+    "group": "legacy_nibis_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.regierung-mv.de/Landesregierung/bm",
+    "host": "www.regierung-mv.de",
+    "group": "legacy_regierung_mv_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://medien.bildung.hessen.de/",
+    "host": "medien.bildung.hessen.de",
+    "group": "legacy_medien_bildung_hessen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bildung.bremen.de/",
+    "host": "www.bildung.bremen.de",
+    "group": "legacy_bildung_bremen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medienbildung.bayern.de/",
+    "host": "www.medienbildung.bayern.de",
+    "group": "legacy_medienbildung_bayern_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.hanisauland.de/lehrer-innen",
+    "host": "www.hanisauland.de",
+    "group": "legacy_hanisauland_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.nlq.niedersachsen.de/",
+    "host": "www.nlq.niedersachsen.de",
+    "group": "legacy_nlq_niedersachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildungsportal-niedersachsen.de/",
+    "host": "bildungsportal-niedersachsen.de",
+    "group": "legacy_bildungsportal_niedersachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.schulministerium.nrw/",
+    "host": "www.schulministerium.nrw",
+    "group": "legacy_schulministerium_nrw",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.qua-lis.nrw.de/",
+    "host": "www.qua-lis.nrw.de",
+    "group": "legacy_qua_lis_nrw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medienberatung.nrw.de/",
+    "host": "www.medienberatung.nrw.de",
+    "group": "legacy_medienberatung_nrw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medienkompetenzrahmen.nrw/",
+    "host": "www.medienkompetenzrahmen.nrw",
+    "group": "legacy_medienkompetenzrahmen_nrw",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.schulentwicklung.nrw.de/",
+    "host": "www.schulentwicklung.nrw.de",
+    "group": "legacy_schulentwicklung_nrw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://pl.rlp.de/",
+    "host": "pl.rlp.de",
+    "group": "legacy_pl_rlp_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.inf-schule.de/",
+    "host": "www.inf-schule.de",
+    "group": "legacy_inf_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.saarland.de/mbk/DE/home/home_node.html",
+    "host": "www.saarland.de",
+    "group": "legacy_saarland_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.lpm.uni-sb.de/",
+    "host": "www.lpm.uni-sb.de",
+    "group": "legacy_lpm_uni_sb_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.schule.sachsen.de/",
+    "host": "www.schule.sachsen.de",
+    "group": "legacy_schule_sachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medienbildung.sachsen.de/",
+    "host": "www.medienbildung.sachsen.de",
+    "group": "legacy_medienbildung_sachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.lasub.smk.sachsen.de/",
+    "host": "www.lasub.smk.sachsen.de",
+    "group": "legacy_lasub_smk_sachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://lisa.sachsen-anhalt.de/",
+    "host": "lisa.sachsen-anhalt.de",
+    "group": "legacy_lisa_sachsen_anhalt_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.iqsh.de/",
+    "host": "www.iqsh.de",
+    "group": "legacy_iqsh_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://fachportal.lernnetz.de/sh",
+    "host": "fachportal.lernnetz.de",
+    "group": "legacy_fachportal_lernnetz_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.schleswig-holstein.de/DE/fachinhalte/B/bildung/bildung_node.html",
+    "host": "www.schleswig-holstein.de",
+    "group": "legacy_schleswig_holstein_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://digitallearninglab.de/unterrichtsbausteine/programmieren-mit-logo",
+    "host": "digitallearninglab.de",
+    "group": "legacy_digitallearninglab_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://digitallearninglab.de/unterrichtsbausteine/gib-den-stick-weiter-freies-schreiben-und-fortsetz",
+    "host": "digitallearninglab.de",
+    "group": "legacy_digitallearninglab_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.schulportal-thueringen.de/",
+    "host": "www.schulportal-thueringen.de",
+    "group": "legacy_schulportal_thueringen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.thillm.de/",
+    "host": "www.thillm.de",
+    "group": "legacy_thillm_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildung.thueringen.de/",
+    "host": "bildung.thueringen.de",
+    "group": "legacy_bildung_thueringen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.kmk.org/",
+    "host": "www.kmk.org",
+    "group": "legacy_kmk_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://open-educational-resources.de/",
+    "host": "open-educational-resources.de",
+    "group": "legacy_open_educational_resources_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://wirlernenonline.de/",
+    "host": "wirlernenonline.de",
+    "group": "legacy_wirlernenonline_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bpb.de/shop/materialien/themenblaetter",
+    "host": "www.bpb.de",
+    "group": "legacy_bpb_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bpb.de/shop/materialien/themenblaetter/311145/die-themenblaetter-als-oer",
+    "host": "www.bpb.de",
+    "group": "legacy_bpb_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bpb.de/lernen",
+    "host": "www.bpb.de",
+    "group": "legacy_bpb_de",
+    "allow_paths": [
+      "/lernen"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.e-teaching.org/",
+    "host": "www.e-teaching.org",
+    "group": "legacy_e_teaching_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.lehrer-online.de/",
+    "host": "www.lehrer-online.de",
+    "group": "legacy_lehrer_online_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.gi.de/",
+    "host": "www.gi.de",
+    "group": "legacy_gi_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.csunplugged.org/de",
+    "host": "www.csunplugged.org",
+    "group": "legacy_csunplugged_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://calliope.cc/",
+    "host": "calliope.cc",
+    "group": "legacy_calliope_cc",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.coding-for-tomorrow.de/",
+    "host": "www.coding-for-tomorrow.de",
+    "group": "legacy_coding_for_tomorrow_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://appcamps.de/",
+    "host": "appcamps.de",
+    "group": "legacy_appcamps_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://lernarchiv.bildung.hessen.de/grundschule",
+    "host": "lernarchiv.bildung.hessen.de",
+    "group": "legacy_lernarchiv_bildung_hessen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://de.serlo.org/mathe",
+    "host": "de.serlo.org",
+    "group": "legacy_de_serlo_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://ki-macht-schule.de/",
+    "host": "ki-macht-schule.de",
+    "group": "legacy_ki_macht_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.handysektor.de/",
+    "host": "www.handysektor.de",
+    "group": "legacy_handysektor_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.hanisauland.de/lehrer-innen/unterrichtsmaterial/lehrer-innen-materialien-bestellen",
+    "host": "www.hanisauland.de",
+    "group": "legacy_hanisauland_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.mediaculture-online.de/",
+    "host": "www.mediaculture-online.de",
+    "group": "legacy_mediaculture_online_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.gmk-net.de/",
+    "host": "www.gmk-net.de",
+    "group": "legacy_gmk_net_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.dguv-lug.de/",
+    "host": "www.dguv-lug.de",
+    "group": "legacy_dguv_lug_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.mint-ec.de/",
+    "host": "www.mint-ec.de",
+    "group": "legacy_mint_ec_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.schule.at/",
+    "host": "www.schule.at",
+    "group": "legacy_schule_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://eeducation.at/",
+    "host": "eeducation.at",
+    "group": "legacy_eeducation_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.saferinternet.at/",
+    "host": "www.saferinternet.at",
+    "group": "legacy_saferinternet_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.virtuelle-ph.at/",
+    "host": "www.virtuelle-ph.at",
+    "group": "legacy_virtuelle_ph_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.lehrplan21.ch/",
+    "host": "www.lehrplan21.ch",
+    "group": "legacy_lehrplan21_ch",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.edk.ch/",
+    "host": "www.edk.ch",
+    "group": "legacy_edk_ch",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://phzh.ch/",
+    "host": "phzh.ch",
+    "group": "legacy_phzh_ch",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://script.lu/",
+    "host": "script.lu",
+    "group": "legacy_script_lu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.kennisnet.nl/",
+    "host": "www.kennisnet.nl",
+    "group": "legacy_kennisnet_nl",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.slo.nl/",
+    "host": "www.slo.nl",
+    "group": "legacy_slo_nl",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.mediawijzer.net/",
+    "host": "www.mediawijzer.net",
+    "group": "legacy_mediawijzer_net",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.klascement.net/",
+    "host": "www.klascement.net",
+    "group": "legacy_klascement_net",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.mediawijs.be/",
+    "host": "www.mediawijs.be",
+    "group": "legacy_mediawijs_be",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://unterrichten.zum.de/wiki/Methode",
+    "host": "unterrichten.zum.de",
+    "group": "legacy_unterrichten_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://deutsch-lernen.zum.de/wiki/Methoden-_und_Spielekiste",
+    "host": "deutsch-lernen.zum.de",
+    "group": "legacy_deutsch_lernen_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://eduscol.education.fr/",
+    "host": "eduscol.education.fr",
+    "group": "legacy_eduscol_education_fr",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.reseau-canope.fr/",
+    "host": "www.reseau-canope.fr",
+    "group": "legacy_reseau_canope_fr",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.kinofenster.de/unterrichten/unterrichtsmaterial",
+    "host": "www.kinofenster.de",
+    "group": "legacy_kinofenster_de",
+    "allow_paths": [
+      "/unterricht"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.clemi.fr/",
+    "host": "www.clemi.fr",
+    "group": "legacy_clemi_fr",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.klicksafe.de/materialien/wo-ist-klaus",
+    "host": "www.klicksafe.de",
+    "group": "legacy_klicksafe_de",
+    "allow_paths": [
+      "/materialien"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://classcode.fr/",
+    "host": "classcode.fr",
+    "group": "legacy_classcode_fr",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://teachcomputing.org/",
+    "host": "teachcomputing.org",
+    "group": "legacy_teachcomputing_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.stem.org.uk/",
+    "host": "www.stem.org.uk",
+    "group": "legacy_stem_org_uk",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.computingatschool.org.uk/",
+    "host": "www.computingatschool.org.uk",
+    "group": "legacy_computingatschool_org_uk",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.bildungsserver.de/schule/grundschule-unterrichtsmaterial-1661-de.html",
+    "host": "www.bildungsserver.de",
+    "group": "legacy_bildungsserver_de",
+    "allow_paths": [
+      "/schule/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.webwise.ie/",
+    "host": "www.webwise.ie",
+    "group": "legacy_webwise_ie",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://edulabs.de/blog",
+    "host": "edulabs.de",
+    "group": "legacy_edulabs_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://emu.dk/",
+    "host": "emu.dk",
+    "group": "legacy_emu_dk",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.oph.fi/en",
+    "host": "www.oph.fi",
+    "group": "legacy_oph_fi",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://kavi.fi/en/media-education",
+    "host": "kavi.fi",
+    "group": "legacy_kavi_fi",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.skolverket.se/",
+    "host": "www.skolverket.se",
+    "group": "legacy_skolverket_se",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.planet-schule.de/schwerpunkt/marie-meets-marx/arbeit-unterricht-100.html",
+    "host": "www.planet-schule.de",
+    "group": "legacy_planet_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://digitalalektioner.se/",
+    "host": "digitalalektioner.se",
+    "group": "legacy_digitalalektioner_se",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.udir.no/",
+    "host": "www.udir.no",
+    "group": "legacy_udir_no",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://de.serlo.org/informatik",
+    "host": "de.serlo.org",
+    "group": "legacy_de_serlo_org",
+    "allow_paths": [
+      "/informatik"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://e-koolikott.ee/",
+    "host": "e-koolikott.ee",
+    "group": "legacy_e_koolikott_ee",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildung.rlp.de/unterricht/faecher",
+    "host": "bildung.rlp.de",
+    "group": "legacy_bildung_rlp_de",
+    "allow_paths": [
+      "/unterricht/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://zpe.gov.pl/",
+    "host": "zpe.gov.pl",
+    "group": "legacy_zpe_gov_pl",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.ore.edu.pl/",
+    "host": "www.ore.edu.pl",
+    "group": "legacy_ore_edu_pl",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.edu.cz/",
+    "host": "www.edu.cz",
+    "group": "legacy_edu_cz",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://revize.edu.cz/",
+    "host": "revize.edu.cz",
+    "group": "legacy_revize_edu_cz",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.indire.it/",
+    "host": "www.indire.it",
+    "group": "legacy_indire_it",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://programmailfuturo.it/",
+    "host": "programmailfuturo.it",
+    "group": "legacy_programmailfuturo_it",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://intef.es/",
+    "host": "intef.es",
+    "group": "legacy_intef_es",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildungsserver.berlin-brandenburg.de/17067",
+    "host": "bildungsserver.berlin-brandenburg.de",
+    "group": "legacy_bildungsserver_berlin_brandenburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://code.intef.es/",
+    "host": "code.intef.es",
+    "group": "legacy_code_intef_es",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.seguranet.pt/",
+    "host": "www.seguranet.pt",
+    "group": "legacy_seguranet_pt",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://school-education.ec.europa.eu/",
+    "host": "school-education.ec.europa.eu",
+    "group": "legacy_school_education_ec_europa_eu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.eun.org/",
+    "host": "www.eun.org",
+    "group": "legacy_eun_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://codeweek.eu/",
+    "host": "codeweek.eu",
+    "group": "legacy_codeweek_eu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://betterinternetforkids.europa.eu/",
+    "host": "betterinternetforkids.europa.eu",
+    "group": "legacy_betterinternetforkids_europa_eu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.unesco.org/en/digital-education",
+    "host": "www.unesco.org",
+    "group": "legacy_unesco_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.unesco.org/en/media-information-literacy",
+    "host": "www.unesco.org",
+    "group": "legacy_unesco_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.coe.int/en/web/education/digital-citizenship-education",
+    "host": "www.coe.int",
+    "group": "legacy_coe_int",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://csteachers.org/",
+    "host": "csteachers.org",
+    "group": "legacy_csteachers_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://code.org/",
+    "host": "code.org",
+    "group": "legacy_code_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://scratch.mit.edu/educators",
+    "host": "scratch.mit.edu",
+    "group": "legacy_scratch_mit_edu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://microbit.org/teach",
+    "host": "microbit.org",
+    "group": "legacy_microbit_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.raspberrypi.org/teach",
+    "host": "www.raspberrypi.org",
+    "group": "legacy_raspberrypi_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildung.rlp.de/verbraucherbildung/richtlinien-und-materialien",
+    "host": "bildung.rlp.de",
+    "group": "legacy_bildung_rlp_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.khanacademy.org/computing",
+    "host": "www.khanacademy.org",
+    "group": "legacy_khanacademy_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.oercommons.org/",
+    "host": "www.oercommons.org",
+    "group": "legacy_oercommons_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://appinventor.mit.edu/",
+    "host": "appinventor.mit.edu",
+    "group": "legacy_appinventor_mit_edu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://berlin.de/sitemap.xml",
+    "host": "berlin.de",
+    "group": "legacy_berlin_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://bildung-lsa.de/sitemap.xml",
+    "host": "bildung-lsa.de",
+    "group": "legacy_bildung_lsa_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://bildung-mv.de/sitemap.xml",
+    "host": "bildung-mv.de",
+    "group": "legacy_bildung_mv_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://bildung.bremen.de/sitemap.xml",
+    "host": "bildung.bremen.de",
+    "group": "legacy_bildung_bremen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://bildungsserver.de/sitemap.xml",
+    "host": "bildungsserver.de",
+    "group": "legacy_bildungsserver_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://bpb.de/sitemap.xml",
+    "host": "bpb.de",
+    "group": "legacy_bpb_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://clemi.fr/sitemap.xml",
+    "host": "clemi.fr",
+    "group": "legacy_clemi_fr",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://coding-for-tomorrow.de/sitemap.xml",
+    "host": "coding-for-tomorrow.de",
+    "group": "legacy_coding_for_tomorrow_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://coe.int/sitemap.xml",
+    "host": "coe.int",
+    "group": "legacy_coe_int",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://computingatschool.org.uk/sitemap.xml",
+    "host": "computingatschool.org.uk",
+    "group": "legacy_computingatschool_org_uk",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://csunplugged.org/sitemap.xml",
+    "host": "csunplugged.org",
+    "group": "legacy_csunplugged_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://dguv-lug.de/sitemap.xml",
+    "host": "dguv-lug.de",
+    "group": "legacy_dguv_lug_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://e-teaching.org/sitemap.xml",
+    "host": "e-teaching.org",
+    "group": "legacy_e_teaching_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://edk.ch/sitemap.xml",
+    "host": "edk.ch",
+    "group": "legacy_edk_ch",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://edu.cz/sitemap.xml",
+    "host": "edu.cz",
+    "group": "legacy_edu_cz",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://eun.org/sitemap.xml",
+    "host": "eun.org",
+    "group": "legacy_eun_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://gi.de/sitemap.xml",
+    "host": "gi.de",
+    "group": "legacy_gi_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://gmk-net.de/sitemap.xml",
+    "host": "gmk-net.de",
+    "group": "legacy_gmk_net_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://hamburg.de/sitemap.xml",
+    "host": "hamburg.de",
+    "group": "legacy_hamburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://handysektor.de/sitemap.xml",
+    "host": "handysektor.de",
+    "group": "legacy_handysektor_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://hanisauland.de/sitemap.xml",
+    "host": "hanisauland.de",
+    "group": "legacy_hanisauland_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://unterrichten.zum.de/wiki/Kategorie:Lernpfad",
+    "host": "unterrichten.zum.de",
+    "group": "legacy_unterrichten_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://indire.it/sitemap.xml",
+    "host": "indire.it",
+    "group": "legacy_indire_it",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://inf-schule.de/sitemap.xml",
+    "host": "inf-schule.de",
+    "group": "legacy_inf_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://iqsh.de/sitemap.xml",
+    "host": "iqsh.de",
+    "group": "legacy_iqsh_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://isb.bayern.de/sitemap.xml",
+    "host": "isb.bayern.de",
+    "group": "legacy_isb_bayern_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://kennisnet.nl/sitemap.xml",
+    "host": "kennisnet.nl",
+    "group": "legacy_kennisnet_nl",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://khanacademy.org/sitemap.xml",
+    "host": "khanacademy.org",
+    "group": "legacy_khanacademy_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://kinofenster.de/sitemap.xml",
+    "host": "kinofenster.de",
+    "group": "legacy_kinofenster_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://klascement.net/sitemap.xml",
+    "host": "klascement.net",
+    "group": "legacy_klascement_net",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://klicksafe.de/sitemap.xml",
+    "host": "klicksafe.de",
+    "group": "legacy_klicksafe_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://kmk.org/sitemap.xml",
+    "host": "kmk.org",
+    "group": "legacy_kmk_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lasub.smk.sachsen.de/sitemap.xml",
+    "host": "lasub.smk.sachsen.de",
+    "group": "legacy_lasub_smk_sachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lehrer-online.de/sitemap.xml",
+    "host": "lehrer-online.de",
+    "group": "legacy_lehrer_online_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lehrplan21.ch/sitemap.xml",
+    "host": "lehrplan21.ch",
+    "group": "legacy_lehrplan21_ch",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lis.bremen.de/sitemap.xml",
+    "host": "lis.bremen.de",
+    "group": "legacy_lis_bremen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lmz-bw.de/sitemap.xml",
+    "host": "lmz-bw.de",
+    "group": "legacy_lmz_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lpm.uni-sb.de/sitemap.xml",
+    "host": "lpm.uni-sb.de",
+    "group": "legacy_lpm_uni_sb_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://mebis.bayern.de/sitemap.xml",
+    "host": "mebis.bayern.de",
+    "group": "legacy_mebis_bayern_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://mediaculture-online.de/sitemap.xml",
+    "host": "mediaculture-online.de",
+    "group": "legacy_mediaculture_online_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://mediawijs.be/sitemap.xml",
+    "host": "mediawijs.be",
+    "group": "legacy_mediawijs_be",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://mediawijzer.net/sitemap.xml",
+    "host": "mediawijzer.net",
+    "group": "legacy_mediawijzer_net",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://medien-in-die-schule.de/sitemap.xml",
+    "host": "medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://medienanstalt-mv.de/sitemap.xml",
+    "host": "medienanstalt-mv.de",
+    "group": "legacy_medienanstalt_mv_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://medienberatung.nrw.de/sitemap.xml",
+    "host": "medienberatung.nrw.de",
+    "group": "legacy_medienberatung_nrw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://medienbildung.bayern.de/sitemap.xml",
+    "host": "medienbildung.bayern.de",
+    "group": "legacy_medienbildung_bayern_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://medienbildung.sachsen.de/sitemap.xml",
+    "host": "medienbildung.sachsen.de",
+    "group": "legacy_medienbildung_sachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://medienkompetenzrahmen.nrw/sitemap.xml",
+    "host": "medienkompetenzrahmen.nrw",
+    "group": "legacy_medienkompetenzrahmen_nrw",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://mint-ec.de/sitemap.xml",
+    "host": "mint-ec.de",
+    "group": "legacy_mint_ec_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://nibis.de/sitemap.xml",
+    "host": "nibis.de",
+    "group": "legacy_nibis_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://nlq.niedersachsen.de/sitemap.xml",
+    "host": "nlq.niedersachsen.de",
+    "group": "legacy_nlq_niedersachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://oercommons.org/sitemap.xml",
+    "host": "oercommons.org",
+    "group": "legacy_oercommons_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://deutsch-lernen.zum.de/wiki/Kategorie:Methoden",
+    "host": "deutsch-lernen.zum.de",
+    "group": "legacy_deutsch_lernen_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://oph.fi/sitemap.xml",
+    "host": "oph.fi",
+    "group": "legacy_oph_fi",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://ore.edu.pl/sitemap.xml",
+    "host": "ore.edu.pl",
+    "group": "legacy_ore_edu_pl",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://planet-schule.de/sitemap.xml",
+    "host": "planet-schule.de",
+    "group": "legacy_planet_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://qua-lis.nrw.de/sitemap.xml",
+    "host": "qua-lis.nrw.de",
+    "group": "legacy_qua_lis_nrw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://raspberrypi.org/sitemap.xml",
+    "host": "raspberrypi.org",
+    "group": "legacy_raspberrypi_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://regierung-mv.de/sitemap.xml",
+    "host": "regierung-mv.de",
+    "group": "legacy_regierung_mv_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://reseau-canope.fr/sitemap.xml",
+    "host": "reseau-canope.fr",
+    "group": "legacy_reseau_canope_fr",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://saarland.de/sitemap.xml",
+    "host": "saarland.de",
+    "group": "legacy_saarland_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://deutsch-lernen.zum.de/wiki/Kategorie:Methoden_und_Spiele",
+    "host": "deutsch-lernen.zum.de",
+    "group": "legacy_deutsch_lernen_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://saferinternet.at/sitemap.xml",
+    "host": "saferinternet.at",
+    "group": "legacy_saferinternet_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://schleswig-holstein.de/sitemap.xml",
+    "host": "schleswig-holstein.de",
+    "group": "legacy_schleswig_holstein_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://schule-bw.de/sitemap.xml",
+    "host": "schule-bw.de",
+    "group": "legacy_schule_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://schule.at/sitemap.xml",
+    "host": "schule.at",
+    "group": "legacy_schule_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://schule.sachsen.de/sitemap.xml",
+    "host": "schule.sachsen.de",
+    "group": "legacy_schule_sachsen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://schulentwicklung.nrw.de/sitemap.xml",
+    "host": "schulentwicklung.nrw.de",
+    "group": "legacy_schulentwicklung_nrw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://schulministerium.nrw/sitemap.xml",
+    "host": "schulministerium.nrw",
+    "group": "legacy_schulministerium_nrw",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://schulportal-thueringen.de/sitemap.xml",
+    "host": "schulportal-thueringen.de",
+    "group": "legacy_schulportal_thueringen_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://seguranet.pt/sitemap.xml",
+    "host": "seguranet.pt",
+    "group": "legacy_seguranet_pt",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://skolverket.se/sitemap.xml",
+    "host": "skolverket.se",
+    "group": "legacy_skolverket_se",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://slo.nl/sitemap.xml",
+    "host": "slo.nl",
+    "group": "legacy_slo_nl",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://stem.org.uk/sitemap.xml",
+    "host": "stem.org.uk",
+    "group": "legacy_stem_org_uk",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://thillm.de/sitemap.xml",
+    "host": "thillm.de",
+    "group": "legacy_thillm_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://udir.no/sitemap.xml",
+    "host": "udir.no",
+    "group": "legacy_udir_no",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://umwelt-im-unterricht.de/sitemap.xml",
+    "host": "umwelt-im-unterricht.de",
+    "group": "legacy_umwelt_im_unterricht_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://unesco.org/sitemap.xml",
+    "host": "unesco.org",
+    "group": "legacy_unesco_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1",
+    "host": "lehrerfortbildung-bw.de",
+    "group": "legacy_lehrerfortbildung_bw_de",
+    "allow_paths": [
+      "/u_matnatech/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://virtuelle-ph.at/sitemap.xml",
+    "host": "virtuelle-ph.at",
+    "group": "legacy_virtuelle_ph_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://webwise.ie/sitemap.xml",
+    "host": "webwise.ie",
+    "group": "legacy_webwise_ie",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.appcamps.de/sitemap.xml",
+    "host": "www.appcamps.de",
+    "group": "legacy_appcamps_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.calliope.cc/sitemap.xml",
+    "host": "www.calliope.cc",
+    "group": "legacy_calliope_cc",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.classcode.fr/sitemap.xml",
+    "host": "www.classcode.fr",
+    "group": "legacy_classcode_fr",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.code.org/sitemap.xml",
+    "host": "www.code.org",
+    "group": "legacy_code_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.codeweek.eu/sitemap.xml",
+    "host": "www.codeweek.eu",
+    "group": "legacy_codeweek_eu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.csteachers.org/sitemap.xml",
+    "host": "www.csteachers.org",
+    "group": "legacy_csteachers_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.digitalalektioner.se/sitemap.xml",
+    "host": "www.digitalalektioner.se",
+    "group": "legacy_digitalalektioner_se",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.digitallearninglab.de/sitemap.xml",
+    "host": "www.digitallearninglab.de",
+    "group": "legacy_digitallearninglab_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.edulabs.de/sitemap.xml",
+    "host": "www.edulabs.de",
+    "group": "legacy_edulabs_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.eeducation.at/sitemap.xml",
+    "host": "www.eeducation.at",
+    "group": "legacy_eeducation_at",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.emu.dk/sitemap.xml",
+    "host": "www.emu.dk",
+    "group": "legacy_emu_dk",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.intef.es/sitemap.xml",
+    "host": "www.intef.es",
+    "group": "legacy_intef_es",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.kavi.fi/sitemap.xml",
+    "host": "www.kavi.fi",
+    "group": "legacy_kavi_fi",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb2",
+    "host": "lehrerfortbildung-bw.de",
+    "group": "legacy_lehrerfortbildung_bw_de",
+    "allow_paths": [
+      "/u_matnatech/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.ki-macht-schule.de/sitemap.xml",
+    "host": "www.ki-macht-schule.de",
+    "group": "legacy_ki_macht_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.lehrerfortbildung-bw.de/sitemap.xml",
+    "host": "www.lehrerfortbildung-bw.de",
+    "group": "legacy_lehrerfortbildung_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.microbit.org/sitemap.xml",
+    "host": "www.microbit.org",
+    "group": "legacy_microbit_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.phzh.ch/sitemap.xml",
+    "host": "www.phzh.ch",
+    "group": "legacy_phzh_ch",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.script.lu/sitemap.xml",
+    "host": "www.script.lu",
+    "group": "legacy_script_lu",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.segu-geschichte.de/sitemap.xml",
+    "host": "www.segu-geschichte.de",
+    "group": "legacy_segu_geschichte_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.teachcomputing.org/sitemap.xml",
+    "host": "www.teachcomputing.org",
+    "group": "legacy_teachcomputing_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.wirlernenonline.de/sitemap.xml",
+    "host": "www.wirlernenonline.de",
+    "group": "legacy_wirlernenonline_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://www.zsl-bw.de/sitemap.xml",
+    "host": "www.zsl-bw.de",
+    "group": "legacy_zsl_bw_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 1,
+    "max_depth": 1,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": true
+  },
+  {
+    "url": "https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb2/z_download",
+    "host": "lehrerfortbildung-bw.de",
+    "group": "legacy_lehrerfortbildung_bw_de",
+    "allow_paths": [
+      "/u_matnatech/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://bildungsserver.berlin-brandenburg.de/sonderpaedagogik/medienbildung-im-sonderpaedagogischen-foerderschwerpunkt-geistige-entwicklung",
+    "host": "bildungsserver.berlin-brandenburg.de",
+    "group": "legacy_bildungsserver_berlin_brandenburg_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.umwelt-im-unterricht.de/unterrichtsvorschlaege",
+    "host": "www.umwelt-im-unterricht.de",
+    "group": "legacy_umwelt_im_unterricht_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.umwelt-im-unterricht.de/materialien",
+    "host": "www.umwelt-im-unterricht.de",
+    "group": "legacy_umwelt_im_unterricht_de",
+    "allow_paths": [
+      "/materialien"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://deutsch-lernen.zum.de/wiki/Gruppenpuzzle",
+    "host": "deutsch-lernen.zum.de",
+    "group": "legacy_deutsch_lernen_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://deutsch-lernen.zum.de/wiki/Stationenlernen",
+    "host": "deutsch-lernen.zum.de",
+    "group": "legacy_deutsch_lernen_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://de.serlo.org/biologie",
+    "host": "de.serlo.org",
+    "group": "legacy_de_serlo_org",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medien-in-die-schule.de/unterrichtseinheiten/jugendliche-online",
+    "host": "www.medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medien-in-die-schule.de/unterrichtseinheiten/jugendliche-online/modul-1-persoenliche-daten",
+    "host": "www.medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://segu-geschichte.de/arbeitsblaetter",
+    "host": "segu-geschichte.de",
+    "group": "legacy_segu_geschichte_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medien-in-die-schule.de/unterrichtseinheiten/jugendliche-online/uebersicht-aller-material-und-arbeitsblaetter",
+    "host": "www.medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://segu-geschichte.de/lernbausteine",
+    "host": "segu-geschichte.de",
+    "group": "legacy_segu_geschichte_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medien-in-die-schule.de/unterrichtseinheiten/meinung-im-netz-gestalten",
+    "host": "www.medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medien-in-die-schule.de/unterrichtseinheiten/meinung-im-netz-gestalten/uebersicht-aller-material-und-arbeitsblaetter",
+    "host": "www.medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/unterrichts"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.medien-in-die-schule.de/downloads",
+    "host": "www.medien-in-die-schule.de",
+    "group": "legacy_medien_in_die_schule_de",
+    "allow_paths": [
+      "/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://unterrichten.zum.de/wiki/Kategorie:Unterrichtsidee",
+    "host": "unterrichten.zum.de",
+    "group": "legacy_unterrichten_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://unterrichten.zum.de/wiki/Kategorie:Methode",
+    "host": "unterrichten.zum.de",
+    "group": "legacy_unterrichten_zum_de",
+    "allow_paths": [
+      "/wiki/"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  },
+  {
+    "url": "https://www.kinofenster.de/unterricht",
+    "host": "www.kinofenster.de",
+    "group": "legacy_kinofenster_de",
+    "allow_paths": [
+      "/unterricht"
+    ],
+    "priority": 2,
+    "max_depth": 4,
+    "license": "check_at_source",
+    "source_kind": "education",
+    "provenance": "Seed-Runde 1 aus Nutzerlog 11.11.2026; HTTP nicht einzeln geprüft",
+    "sitemap": false
+  }
+]
