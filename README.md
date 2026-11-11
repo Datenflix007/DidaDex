@@ -2,6 +2,9 @@
 
 Didaktisch-methodische Suchmaschine für Unterrichtsmaterialien – lokaler Crawler, SQLite-Resume und optionaler Desktop-Materialviewer.
 
+<img width="1795" height="1187" alt="image" src="https://github.com/user-attachments/assets/3742d009-70bf-45d2-b6ef-8da8ba933909" />
+
+
 ## Start (Windows, Python 3.10+)
 
 **Empfohlen – integrierte Python-Oberfläche mit DFS-Einstellungen und Viewer:**
