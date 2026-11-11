@@ -1,0 +1,12 @@
+# Laufzeit-Abhängigkeiten des bestehenden Jupyter-Crawlers.
+# Die Helfer unter crawler/ selbst verwenden für Konfiguration, Merge und
+# Berichte nur die Standardbibliothek; die folgenden Pakete werden erst für
+# den Scrapy-Lauf bzw. die lokale Materialtextextraktion benötigt.
+scrapy>=2.15
+resiliparse
+pandas
+requests
+pypdf
+python-docx
+python-pptx
+odfpy
