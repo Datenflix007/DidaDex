@@ -17,15 +17,17 @@ Der vorherige Scheduler wählte aus der globalen Frontier mit `ORDER BY depth AS
 
 ## Einstellbare Parameter
 
-| Modus | Seiten pro Seed-Runde (`pages_per_seed_turn`) | Tiefenschritt (`DFS_DEPTH_STEP`) | Worker aus bestehendem Profil |
-|---|---:|---:|---:|
-| `TEST` | 15 | 5 | 5 |
-| `STANDARD` | 50 | 5 | 6 |
-| `NACHT` | 100 | 5 | 8 |
+| Modus | Standardlaufzeit | Seiten pro Seed-Runde (`pages_per_seed_turn`) | Tiefenschritt (`DFS_DEPTH_STEP`) | Worker aus bestehendem Profil |
+|---|---:|---:|---:|---:|
+| `TEST` | 10 min | 15 | 5 | 5 |
+| `STANDARD` | 3 h | 50 | 5 | 6 |
+| `NACHT` | 12 h | 100 | 5 | 8 |
 
 **Crawler-Laufzeit:** `crawler/crawler.py` ist die kanonische Ausführungsdatei. Der Desktop übergibt Profil und DFS-Werte als kleine Laufkonfigurations-JSON; `crawler/crawler.ipynb` wird dafür nicht mehr verwendet.
 
 **Python-Desktop:** `python engine.py` starten (oder `python engine_desktop.py` als Kompatibilitätsstarter). Im Tab „Crawler“ gibt es zusätzlich die Felder **DFS: Seiten pro Seed-Runde** und **Tiefenschritt pro Runde**. Die vereinheitlichte Engine übergibt diese Werte direkt an `crawler.py`.
+
+**Laufzeit-Auswahl:** Neben den kurzen Testwerten 5, 10 und 30 Minuten bietet die Oberfläche ganze Stunden von 1 bis **60 h**. `NACHT` startet weiterhin mit 12 h, ist aber kein 720-Minuten-Hardlimit. Die Runtime akzeptiert auch direkte Laufkonfigurationen bis 3.600 Minuten und weist höhere Werte zurück.
 
 Empfehlung: Mit `TEST`, 15 Seiten/Seed und Tiefenschritt 5 beginnen. Mehr Worker sind nicht automatisch schneller: `robots.txt`, Host-Pausen, langsame Server und heruntergeladene Materialien können begrenzen.
 

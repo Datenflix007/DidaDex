@@ -56,6 +56,15 @@ class WidescreenLayoutTests(unittest.TestCase):
         self.app._append_log('Zweite Testmeldung')
         self.assertIn('Zweite Testmeldung', self.app.log.get('1.0', 'end-1c'))
 
+    def test_runtime_selector_allows_up_to_sixty_hours(self):
+        self.assertEqual(str(self.app.runtime_selector.cget('state')), 'readonly')
+        self.assertIn('60 h', self.app.runtime_selector.cget('values'))
+        self.app.mode.set('NACHT')
+        self.app.update_idletasks()
+        self.assertEqual(self.app.runtime_selection.get(), '12 h')
+        self.app.runtime_selection.set('60 h')
+        self.assertEqual(self.app._settings()['runtime_minutes'], 60 * 60)
+
     def test_heatmap_and_metrics_render(self):
         self.app.running = True
         self.app._show_dashboard()

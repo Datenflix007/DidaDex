@@ -44,7 +44,7 @@ Die Laufzeit enthält DNS-/TLS-Verbindungen, initiale `robots.txt`-Abrufe, Downl
 
 ## Nächste sinnvolle Evaluation
 
-- Zunächst 10 Minuten im TEST-Profil, möglichst mit neuem Laufnamen.
+- Für eine kurze Vorprüfung 5 oder 10 Minuten wählen; für längere Durchläufe stehen ganze Stunden bis 60 h zur Verfügung. Möglichst einen neuen Laufnamen verwenden.
 - Anzahl erledigter URLs, Fehler, Warteschlangenwachstum, Tiefe > 0 und Zahl der wirklich indexierten Dokumente in `progress.log` / Heatmap kontrollieren.
 - Qualitätsstichprobe von 20–50 Treffern anhand *konkreter Unterrichtsaufträge*, fachlicher Eignung, Materialverweise und Nutzbarkeit bilden.
 - Erst dann entscheiden, ob Navigation, Materialerkennung oder Klassifikationsschwellen angepasst werden müssen.

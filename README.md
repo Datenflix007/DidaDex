@@ -19,6 +19,8 @@ Auch `python engine.py` startet die vollständige Desktop-Oberfläche. Der bishe
 
 **Crawler direkt:** `python crawler/crawler.py` startet den kanonischen Python-Crawler mit dem TEST-Standardprofil. Das Desktop-Fenster übergibt seine Laufkonfiguration als kleine temporäre JSON-Datei an dieselbe Datei. `crawler/crawler.ipynb` bleibt nur als historische Referenz erhalten und wird nicht mehr vom Desktop gestartet.
 
+**Laufzeit:** Die Desktop-Auswahl bietet kurze Testläufe (5, 10 oder 30 Minuten) sowie volle Stunden von 1 bis **60 Stunden**. Die Profile starten weiterhin mit ihren bewährten Vorgaben (TEST: 10 Minuten, STANDARD: 3 Stunden, NACHT: 12 Stunden); die Auswahl kann sie bis 60 Stunden überschreiben. Intern bleibt die Übergabe an den Crawler in Minuten kompatibel.
+
 ## Neu: Live-Dashboard während des Crawls
 
 Nach **Crawler starten** tauscht `engine_desktop.py` die große Einstellungsmaske gegen ein **zweispaltiges Live-Dashboard** aus: links die Treffer-/Crawlerzahlen mit nativer Tiefen-Heatmap, rechts die fortlaufende Konsole mit Status und Fortschrittsanzeige. Mit **Sauber stoppen & exportieren** wird der bestehende Stoppprozess verwendet. Erst nach Beendigung lässt sich zu **Einstellungen** zurückkehren. Die Materialansicht bleibt als separater Tkinter-Tab erreichbar.

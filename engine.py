@@ -48,6 +48,29 @@ PRESETS = {
     'NACHT': {'runtime_minutes': 720, 'max_pages': 250000, 'max_depth': 50, 'workers': 8,
               'max_per_host': 50000, 'max_queue': 500000},
 }
+MAX_RUNTIME_HOURS = 60
+MAX_RUNTIME_MINUTES = MAX_RUNTIME_HOURS * 60
+RUNTIME_CHOICES = tuple(
+    [('5 min', 5), ('10 min', 10), ('30 min', 30)]
+    + [(f'{hours} h', hours * 60) for hours in range(1, MAX_RUNTIME_HOURS + 1)]
+)
+_RUNTIME_MINUTES_BY_LABEL = dict(RUNTIME_CHOICES)
+_RUNTIME_LABEL_BY_MINUTES = {minutes: label for label, minutes in RUNTIME_CHOICES}
+
+
+def runtime_label(minutes: int) -> str:
+    """Return the selectable desktop label for an internal minute value."""
+    return _RUNTIME_LABEL_BY_MINUTES.get(int(minutes), f'{int(minutes)} min')
+
+
+def runtime_minutes_from_selection(value: str) -> int:
+    """Translate the desktop duration choice while keeping the runtime API in minutes."""
+    try:
+        return _RUNTIME_MINUTES_BY_LABEL[str(value).strip()]
+    except KeyError as exc:
+        raise ValueError(
+            f'Laufzeit: Bitte eine Auswahl von 5 Minuten bis {MAX_RUNTIME_HOURS} Stunden treffen.'
+        ) from exc
 
 
 def crawl_config_payload(config: dict) -> dict:
@@ -103,7 +126,7 @@ class DidaDex(tk.Tk):
         self._last_error = ''
         self.mode = tk.StringVar(value='TEST')
         self.run_name = tk.StringVar(value=datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
-        self.runtime = tk.IntVar(value=10)
+        self.runtime_selection = tk.StringVar(value=runtime_label(PRESETS['TEST']['runtime_minutes']))
         self.pages = tk.IntVar(value=2500)
         self.depth = tk.IntVar(value=50)
         self.workers = tk.IntVar(value=5)
@@ -175,8 +198,12 @@ class DidaDex(tk.Tk):
         ttk.Entry(config, textvariable=self.run_name).grid(row=1, column=1, columnspan=3, sticky='ew', padx=(0, 8))
         ttk.Label(config, text='Ziel (MiB)').grid(row=0, column=4, sticky='w')
         ttk.Entry(config, textvariable=self.target, width=9).grid(row=1, column=4, sticky='ew', padx=(0, 8))
-        ttk.Label(config, text='Zeitlimit (min)').grid(row=0, column=5, sticky='w')
-        ttk.Entry(config, textvariable=self.runtime, width=10).grid(row=1, column=5, sticky='ew', padx=(0, 8))
+        ttk.Label(config, text='Laufzeit (max. 60 h)').grid(row=0, column=5, sticky='w')
+        self.runtime_selector = ttk.Combobox(
+            config, textvariable=self.runtime_selection,
+            values=[label for label, _ in RUNTIME_CHOICES], state='readonly', width=12,
+        )
+        self.runtime_selector.grid(row=1, column=5, sticky='ew', padx=(0, 8))
         ttk.Label(config, text='Max. Seiten').grid(row=0, column=6, sticky='w')
         ttk.Entry(config, textvariable=self.pages, width=11).grid(row=1, column=6, columnspan=2, sticky='ew')
         for c, (title, var) in enumerate((('Max. Tiefe', self.depth), ('Worker', self.workers),
@@ -245,8 +272,8 @@ class DidaDex(tk.Tk):
 
     def _on_mode(self, *_):
         profile = PRESETS[self.mode.get()]
-        for name, variable in (('runtime_minutes', self.runtime), ('max_pages', self.pages),
-                               ('max_depth', self.depth), ('workers', self.workers),
+        self.runtime_selection.set(runtime_label(profile['runtime_minutes']))
+        for name, variable in (('max_pages', self.pages), ('max_depth', self.depth), ('workers', self.workers),
                                ('max_per_host', self.per_host), ('max_queue', self.queue_limit)):
             variable.set(profile[name])
         self.run_name.set(datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
@@ -255,8 +282,9 @@ class DidaDex(tk.Tk):
         name = self.run_name.get().strip()
         if not re.fullmatch(r'[A-Za-z0-9_-]+', name):
             raise ValueError('Laufname: nur A-Z, a-z, 0-9, _ und -.')
+        runtime_minutes = runtime_minutes_from_selection(self.runtime_selection.get())
         d = dict(mode=self.mode.get(), run_name=name, target_mib=self.target.get(),
-                 runtime_minutes=self.runtime.get(), max_pages=self.pages.get(),
+                 runtime_minutes=runtime_minutes, max_pages=self.pages.get(),
                  max_depth=self.depth.get(), workers=self.workers.get(),
                  max_per_host=self.per_host.get(), max_queue=self.queue_limit.get(),
                  DOWNLOAD_DELAY_SECONDS=self.delay.get(), MIN_TEXT_CHARS=self.min_chars.get(),
@@ -275,8 +303,8 @@ class DidaDex(tk.Tk):
             raise ValueError('Die maximale Tiefe darf 50 nicht überschreiten.')
         if not 0 <= d['DOWNLOAD_DELAY_SECONDS'] <= 300:
             raise ValueError('Pause/Host muss zwischen 0 und 300 Sekunden liegen.')
-        if d['mode'] == 'TEST' and d['runtime_minutes'] > 10:
-            raise ValueError('TEST ist auf höchstens 10 Minuten beschränkt.')
+        if not 1 <= d['runtime_minutes'] <= MAX_RUNTIME_MINUTES:
+            raise ValueError(f'Laufzeit muss zwischen 1 Minute und {MAX_RUNTIME_HOURS} Stunden liegen.')
         return d
 
     def _post(self, kind, payload=''):

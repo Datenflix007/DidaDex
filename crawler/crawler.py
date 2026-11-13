@@ -16,6 +16,8 @@ from pathlib import Path
 
 CRAWLER_DIR = Path(__file__).resolve().parent
 CONFIG_DIR = CRAWLER_DIR / "config"
+MAX_RUNTIME_HOURS = 60
+MAX_RUNTIME_MINUTES = MAX_RUNTIME_HOURS * 60
 DEFAULT_PROFILES = {
     "TEST": dict(max_pages=2500, runtime_minutes=10, max_depth=50,
                  workers=5, max_per_host=400, max_queue=40000, pages_per_seed_turn=15),
@@ -120,6 +122,11 @@ def _apply_runtime_config(raw: dict | None = None, stop_file: Path | None = None
         raise ValueError("DFS_DEPTH_STEP muss zwischen 1 und 200 liegen.")
     if not 1 <= profile["pages_per_seed_turn"] <= 1000:
         raise ValueError("pages_per_seed_turn muss zwischen 1 und 1000 liegen.")
+    if not 1 <= profile["runtime_minutes"] <= MAX_RUNTIME_MINUTES:
+        raise ValueError(
+            f"runtime_minutes muss zwischen 1 und {MAX_RUNTIME_MINUTES} liegen "
+            f"(maximal {MAX_RUNTIME_HOURS} Stunden)."
+        )
     globals().update(values)
 
 
@@ -128,6 +135,15 @@ def _parse_args(argv=None):
     parser.add_argument("--config", type=Path, help="JSON-Datei mit Laufkonfiguration")
     parser.add_argument("--stop-file", type=Path, help="vom Launcher gesetztes Stoppsignal")
     return parser.parse_args(argv)
+
+
+def _format_runtime(minutes: int) -> str:
+    hours, remaining_minutes = divmod(int(minutes), 60)
+    if hours and remaining_minutes:
+        return f"{hours} h {remaining_minutes} min"
+    if hours:
+        return f"{hours} h"
+    return f"{remaining_minutes} min"
 
 
 _apply_runtime_config({})
@@ -1110,7 +1126,7 @@ def main(argv=None):
     args = _parse_args(argv)
     runtime_config = _read_json_file(args.config, "Laufkonfiguration") if args.config else {}
     _apply_runtime_config(runtime_config, args.stop_file)
-    print(f"Konfiguration: {MODUS}, {PROFILE['runtime_minutes']} min, Ziel {TARGET_MIB} MiB", flush=True)
+    print(f"Konfiguration: {MODUS}, {_format_runtime(PROFILE['runtime_minutes'])}, Ziel {TARGET_MIB} MiB", flush=True)
     print_source_summary()
     print("@@STEP@@ Offline-Selbsttests", flush=True)
     _run_offline_checks()

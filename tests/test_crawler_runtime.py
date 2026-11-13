@@ -48,12 +48,28 @@ class CrawlerRuntimeTests(unittest.TestCase):
         self.assertEqual(self.crawler.SUBJECT_FILTER, ['Informatik'])
         self.assertFalse(self.crawler.QUELLEN_UEBERGREIFEND)
 
+    def test_runtime_accepts_up_to_sixty_hours_and_rejects_more(self):
+        self.crawler._apply_runtime_config({
+            'mode': 'NACHT', 'profile': {'runtime_minutes': 60 * 60},
+        })
+        self.assertEqual(self.crawler.PROFILE['runtime_minutes'], 60 * 60)
+        with self.assertRaisesRegex(ValueError, 'maximal 60 Stunden'):
+            self.crawler._apply_runtime_config({
+                'mode': 'NACHT', 'profile': {'runtime_minutes': 60 * 60 + 1},
+            })
+
     def test_desktop_payload_is_accepted_by_the_canonical_crawler(self):
-        from engine import crawl_config_payload
+        from engine import MAX_RUNTIME_HOURS, crawl_config_payload, runtime_minutes_from_selection
+
+        self.assertEqual(MAX_RUNTIME_HOURS, 60)
+        self.assertEqual(runtime_minutes_from_selection('5 min'), 5)
+        self.assertEqual(runtime_minutes_from_selection('60 h'), 60 * 60)
+        with self.assertRaises(ValueError):
+            runtime_minutes_from_selection('61 h')
 
         payload = crawl_config_payload({
             'mode': 'TEST', 'run_name': 'desktop_runtime_test', 'target_mib': 1,
-            'runtime_minutes': 1, 'max_pages': 2, 'max_depth': 3,
+            'runtime_minutes': 60 * 60, 'max_pages': 2, 'max_depth': 3,
             'workers': 1, 'max_per_host': 4, 'max_queue': 5,
             'DOWNLOAD_DELAY_SECONDS': 0, 'MIN_TEXT_CHARS': 1,
             'MAX_TEXT_CHARS': 100, 'MAX_MATERIAL_MIB': 1,
@@ -66,6 +82,7 @@ class CrawlerRuntimeTests(unittest.TestCase):
         })
         self.crawler._apply_runtime_config(payload)
         self.assertEqual(self.crawler.RUN_NAME, 'desktop_runtime_test')
+        self.assertEqual(self.crawler.PROFILE['runtime_minutes'], 60 * 60)
         self.assertEqual(self.crawler.PROFILE['pages_per_seed_turn'], 2)
         self.assertEqual(self.crawler.DFS_DEPTH_STEP, 3)
 

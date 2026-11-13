@@ -84,6 +84,13 @@ Nach Ende des Prozesses entfernt die Engine sowohl die temporäre
 Laufkonfiguration als auch die Stop-Markierung. Beide Dateimuster stehen in
 `.gitignore` und gehören nicht in Commits.
 
+Die Laufzeit wird im Desktop als Auswahl angeboten: 5, 10 oder 30 Minuten für
+Kurztests sowie ganze Stunden von 1 bis **60 h**. Die Engine serialisiert den
+gewählten Wert aus Kompatibilitätsgründen weiterhin als `runtime_minutes`.
+Die Profile setzen beim Wechsel nur ihre Standardwerte (TEST: 10 min,
+STANDARD: 3 h, NACHT: 12 h); `NACHT` ist kein festes 720-Minuten-Limit.
+Auch direkte Konfigurationen dürfen höchstens 3.600 Minuten enthalten.
+
 ### Direkter Start
 
 ```powershell
@@ -93,7 +100,8 @@ python crawler/crawler.py
 Ohne `--config` verwendet der Crawler das TEST-Standardprofil. Für
 automatisierte oder reproduzierbare Läufe kann eine eigene JSON-Datei mit
 `--config` angegeben werden; `--stop-file` ist der Schnittstellenweg für einen
-geordneten externen Stopp.
+geordneten externen Stopp. Für `profile.runtime_minutes` gilt ebenfalls die
+Obergrenze von 3.600 Minuten (60 Stunden).
 
 ## Ablauf der Pipeline
 
