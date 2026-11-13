@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "extensions": {
+    "zum_unterrichten": [
+      "https://unterrichten.zum.de/wiki/Kategorie:Informatik",
+      "https://unterrichten.zum.de/wiki/Kategorie:Arbeitsblatt"
+    ],
+    "serlo": [
+      "https://de.serlo.org/physik"
+    ],
+    "segu_geschichte": [
+      "https://segu-geschichte.de/arbeitsblaetter/",
+      "https://segu-geschichte.de/lernbausteine/"
+    ],
+    "kinofenster": [
+      "https://www.kinofenster.de/unterricht/"
+    ],
+    "environment_education": [
+      "https://www.umwelt-im-unterricht.de/unterrichtsvorschlaege/",
+      "https://www.umwelt-im-unterricht.de/materialien/"
+    ]
+  }
+}

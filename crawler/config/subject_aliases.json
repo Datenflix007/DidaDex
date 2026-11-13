@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "subjects": {
+    "Informatik": [
+      "informatik",
+      "programmierung",
+      "algorithmus",
+      "algorithmen",
+      "python",
+      "scratch",
+      "automatentheorie",
+      "datenbank",
+      "kryptographie",
+      "informationstechnik",
+      "medieninformatik"
+    ],
+    "Geschichte": [
+      "geschichte",
+      "historisch",
+      "mittelalter",
+      "nationalsozialismus",
+      "industrialisierung",
+      "revolution",
+      "weimarer republik",
+      "quellenanalyse"
+    ],
+    "Deutsch": [
+      "deutsch",
+      "literatur",
+      "gedicht",
+      "grammatik",
+      "rechtschreibung",
+      "lektüre",
+      "textanalyse",
+      "sprachunterricht"
+    ],
+    "Mathematik": [
+      "mathematik",
+      "geometrie",
+      "algebra",
+      "stochastik",
+      "wahrscheinlichkeit",
+      "bruchrechnung",
+      "funktionen"
+    ],
+    "Physik": [
+      "physik",
+      "elektrizität",
+      "mechanik",
+      "optik",
+      "schall",
+      "energieerhaltung"
+    ],
+    "Chemie": [
+      "chemie",
+      "reaktion",
+      "periodensystem",
+      "säuren",
+      "basen",
+      "atommodell"
+    ],
+    "Biologie": [
+      "biologie",
+      "ökologie",
+      "evolution",
+      "zellbiologie",
+      "genetik",
+      "photosynthese"
+    ],
+    "Geographie": [
+      "geographie",
+      "geografie",
+      "erdkunde",
+      "klimawandel",
+      "stadtentwicklung",
+      "geologie"
+    ],
+    "Ethik": [
+      "ethik",
+      "philosophie",
+      "moral",
+      "wertebildung",
+      "gerechtigkeit"
+    ],
+    "Politik": [
+      "politik",
+      "politische bildung",
+      "demokratie",
+      "bundestag",
+      "grundgesetz",
+      "gesellschaftslehre"
+    ],
+    "Englisch": [
+      "englisch",
+      "english",
+      "vocabulary",
+      "grammar",
+      "listening comprehension"
+    ],
+    "Kunst": [
+      "kunstunterricht",
+      "kunsterziehung",
+      "malerei",
+      "bildanalyse",
+      "kunstgeschichte"
+    ],
+    "Musik": [
+      "musikunterricht",
+      "musiktheorie",
+      "rhythmus",
+      "notenlehre"
+    ],
+    "Religion": [
+      "religionsunterricht",
+      "bibel",
+      "christentum",
+      "religionspädagogik"
+    ],
+    "Sport": [
+      "sportunterricht",
+      "sportpädagogik",
+      "bewegungsspiele",
+      "leichtathletik"
+    ],
+    "Sachunterricht": [
+      "sachunterricht",
+      "grundschule",
+      "heimat- und sachunterricht"
+    ],
+    "Medienbildung": [
+      "medienbildung",
+      "medienkompetenz",
+      "digitale bildung",
+      "digital citizenship",
+      "internetkompetenz"
+    ]
+  }
+}

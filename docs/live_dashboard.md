@@ -31,7 +31,7 @@ Die Heatmap basiert ebenfalls auf SQLite: **Grün** bedeutet indexierte Dokument
 
 ## Dateien und Aktualisierung
 
-Das Notebook erstellt zusätzlich während des Crawls spätestens etwa alle zwei Sekunden (sofern neue URLs abgearbeitet werden) die kleine Statusdatei `crawler_live.json` per atomarem Ersetzen. Sie enthält nur technische Zähler, **keine Volltexte**. Der Monitor aktualisiert alle drei Sekunden eine **separate** lokale Datei:
+`crawler.py` erstellt zusätzlich während des Crawls spätestens etwa alle zwei Sekunden (sofern neue URLs abgearbeitet werden) die kleine Statusdatei `crawler_live.json` per atomarem Ersetzen. Sie enthält nur technische Zähler, **keine Volltexte**. Der Monitor aktualisiert alle drei Sekunden eine **separate** lokale Datei:
 
 `crawler/outputs/runs/<RUN_NAME>/depth_heatmap_live.html`
 

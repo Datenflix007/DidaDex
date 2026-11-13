@@ -1,19 +1,20 @@
 """Offline-Regressionstests für DidaDex Round-Robin-DFS (keine Netzanfragen)."""
-import json
+import importlib.util
 import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
 
-NOTEBOOK = Path(__file__).resolve().parents[1] / 'crawler' / 'crawler.ipynb'
+CRAWLER_SCRIPT = Path(__file__).resolve().parents[1] / 'crawler' / 'crawler.py'
 
 
 def load_crawler():
-    notebook = json.loads(NOTEBOOK.read_text(encoding='utf-8'))
-    env = {'__name__': 'didadex_offline_test'}
-    for cell_idx in (1, 5, 7, 9):
-        exec(compile(''.join(notebook['cells'][cell_idx]['source']),
-                     f'notebook_cell_{cell_idx}', 'exec'), env)
+    spec = importlib.util.spec_from_file_location('didadex_offline_test', CRAWLER_SCRIPT)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f'Crawler-Skript nicht importierbar: {CRAWLER_SCRIPT}')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    env = module.__dict__
     env['SEEDS'] = ['https://a.test/root', 'https://b.test/root']
     env['ALLOWED_HOSTS'] = {'a.test', 'b.test'}
     env['HOST_TO_SOURCE'] = {'a.test': 'A', 'b.test': 'B'}
