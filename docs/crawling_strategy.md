@@ -25,9 +25,17 @@ Der vorherige Scheduler wählte aus der globalen Frontier mit `ORDER BY depth AS
 
 **Notebook:** In der ersten Konfigurationszelle `PROFILE` und `DFS_DEPTH_STEP` anpassen.
 
-**Python-Desktop:** `python engine_desktop.py` starten. Im Tab „Crawler“ gibt es zusätzlich die Felder **DFS: Seiten pro Seed-Runde** und **Tiefenschritt pro Runde**. Die ursprüngliche `engine.py` ist unverändert: Beim Start über `python engine.py` greifen die voreingestellten Werte aus der neuen Crawler-Engine. Der neue Desktop-Launcher ergänzt die bestehende Notebook-Injektion um explizit gewählte DFS-Werte.
+**Python-Desktop:** `python engine.py` starten (oder `python engine_desktop.py` als Kompatibilitätsstarter). Im Tab „Crawler“ gibt es zusätzlich die Felder **DFS: Seiten pro Seed-Runde** und **Tiefenschritt pro Runde**. Die vereinheitlichte Engine ergänzt die Notebook-Injektion um explizit gewählte DFS-Werte.
 
 Empfehlung: Mit `TEST`, 15 Seiten/Seed und Tiefenschritt 5 beginnen. Mehr Worker sind nicht automatisch schneller: `robots.txt`, Host-Pausen, langsame Server und heruntergeladene Materialien können begrenzen.
+
+## Reichweite und Durchsatz ab dem nächsten Lauf
+
+- Die URL-Deduplizierung bleibt slashlos, aber ein Redirect-Ziel mit bedeutungsvollem abschließendem Slash wird korrekt abgerufen. Echte Redirect-Zyklen werden nach der ersten Wiederholung beendet.
+- Beim Fortsetzen eines alten Laufs werden ausschließlich frühere Fehler `too_many_redirects` einmal wieder in die Warteschlange gestellt. Das betrifft die frühere Slash-Fehlbehandlung; neue echte Zyklen erhalten einen anderen Fehlergrund. Vorher die SQLite-Datei samt WAL/SHM sichern.
+- Quellübergreifende Navigation ist jetzt standardmäßig aus. Alle kuratierten Seeds werden weiterhin gecrawlt; die Desktop-Option **Freigegebene Hosts verbinden (optional)** kann sie gezielt wieder aktivieren. Das schützt die Warteschlange vor einem einzelnen sehr großen Host.
+- Der Crawler folgt zusätzlich höchstens vier `Sitemap:`-Angaben aus einer erlaubten `robots.txt` desselben Hosts. `robots.txt`, Host-Allowlist und die vorhandenen Sitemap-Limits bleiben dabei verbindlich.
+- Die Tiefen-Heatmap wird höchstens im eingestellten Intervall erzeugt und am Ende erzwungen geschrieben. `STORE_CRAWL_EDGES = False` vermeidet standardmäßig die große reine Diagnose-Tabelle; für eine gezielte Graphanalyse kann sie in der Notebook-Konfigurationszelle aktiviert werden.
 
 ## Neue SQLite-Felder
 

@@ -13,9 +13,9 @@ Didaktisch-methodische Suchmaschine für Unterrichtsmaterialien – lokaler Craw
 python engine_desktop.py
 ```
 
-Die Desktop-Variante verwendet die vorhandene `engine.py` für Start, Stop, Export, Worker und Fachauswahl, ergänzt zwei Round-Robin-DFS-Parameter und zeigt den Materialviewer **direkt im Tkinter-Tab** ohne Browser oder Streamlit.
+`engine.py` vereint Start, Stop, Export, Worker, Fachauswahl, die beiden Round-Robin-DFS-Parameter, den nativen Materialviewer und das Live-Dashboard. `engine_desktop.py` ist ein kompatibler Starter und öffnet dieselbe Oberfläche.
 
-Alternativ lässt sich die **bisherige** `engine.py` weiterhin mit `python engine.py` starten; die neuen DFS-Standardwerte bleiben auch dort aktiv. Der bisherige Streamlit-Viewer bleibt als Rückfalloption vorhanden. Die Engine legt bei Bedarf eine `.venv` an und installiert Crawler-Abhängigkeiten aus `crawler/requirements_crawler.txt`.
+Auch `python engine.py` startet die vollständige Desktop-Oberfläche. Der bisherige Streamlit-Viewer bleibt als Rückfalloption vorhanden. Die Engine legt bei Bedarf eine `.venv` an und installiert Crawler-Abhängigkeiten aus `crawler/requirements_crawler.txt`.
 
 **Notebook direkt:** `crawler/crawler.ipynb` in Jupyter öffnen, erste Einstellungszelle konfigurieren und „Run All“ ausführen. Im Notebook benötigte Pakete werden im aktiven Kernel installiert.
 
@@ -25,7 +25,7 @@ Nach **Crawler starten** tauscht `engine_desktop.py` die große Einstellungsmask
 
 Die Dashboard-Daten stammen aus der bestehenden SQLite-Datenbank und einer kleinen zusätzlich erzeugten Statusdatei. Neben der bisherigen `depth_heatmap.html` wird `depth_heatmap_live.html` alle etwa drei Sekunden neu erzeugt. Die HTML-Datei lässt sich optional über den Button öffnen; **für die Heatmap im Python-Fenster wird kein Browser benötigt**.
 
-Technische Details und die genaue Bedeutung der Kennzahlen: [`docs/live_dashboard.md`](docs/live_dashboard.md). `engine.py` weiterhin behalten, denn `engine_desktop.py` importiert diese Datei.
+Technische Details und die genaue Bedeutung der Kennzahlen: [`docs/live_dashboard.md`](docs/live_dashboard.md). Die Implementierung liegt in `engine.py`; `engine_desktop.py` bleibt als kompatibler Startweg erhalten.
 
 ## Neu: Round-Robin-DFS pro Seed
 

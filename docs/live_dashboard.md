@@ -8,7 +8,7 @@ Der Tab **Crawler** hat zwei Ansichten. Vor dem Lauf ist die bestehende Konfigur
 python engine_desktop.py
 ```
 
-Die Ansicht lässt sich während des Laufs **nicht** zurück zu den Einstellungen schalten. **Sauber stoppen & exportieren** löst denselben geordneten Stoppprozess aus wie die bisherige Engine. Nach dem Crawl bleibt das Dashboard zur Kontrolle sichtbar; mit **Einstellungen** geht es zurück zur Konfiguration. `engine.py` wird weiter benötigt und **nicht** ersetzt oder gelöscht. Der Materialviewer bleibt im zweiten Tab.
+Die Ansicht lässt sich während des Laufs **nicht** zurück zu den Einstellungen schalten. **Sauber stoppen & exportieren** löst denselben geordneten Stoppprozess aus wie die bisherige Engine. Nach dem Crawl bleibt das Dashboard zur Kontrolle sichtbar; mit **Einstellungen** geht es zurück zur Konfiguration. `engine.py` enthält jetzt die vereinheitlichte Oberfläche; `engine_desktop.py` bleibt als kompatibler Starter. Der Materialviewer bleibt im zweiten Tab.
 
 ## Live-Daten: Herkunft und Bedeutung
 
@@ -46,7 +46,7 @@ Die bestehenden Ausgaben des Crawlers `depth_heatmap.html`, `depth_heatmap.json`
 - Ein kurzzeitiger Datenbank-Lesefehler erscheint einmalig im Terminal und wird beim nächsten Intervall erneut versucht. Der Crawl wird deswegen nicht beendet.
 - Statusdateien werden atomar ersetzt. Wenn die optionale Statusdatei nicht schreibbar ist, läuft der Crawler weiter.
 - Der Monitor läuft nach Abschluss bis zur Rückkehr zu den Einstellungen weiter, um die Export-Zahlen zu aktualisieren.
-- Das alte `engine.py` und der Streamlit-Viewer bleiben als Fallback im Repository.
+- `engine_desktop.py` bleibt als kompatibler Startweg; der Streamlit-Viewer bleibt als Fallback im Repository.
 
 ## Prüfung
 

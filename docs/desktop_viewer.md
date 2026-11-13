@@ -10,18 +10,18 @@ Die ersten kurzen Testläufe lieferten wenige, aber inhaltlich brauchbare Dokume
 |---|---|
 | `crawler/crawler.ipynb` | Parallele `robots.txt`-Abfrage (je Host geschützt), Round-Robin-DFS mit progressiver Tiefengrenze, persistenter Seed-Zuordnung. Qualitätsfilter und Seed-Liste unverändert. |
 | `crawledDataViewer/viewer_tk.py` | Neuer Tkinter-Viewer, der ohne Webserver oder Streamlit im Python-Fenster läuft. |
-| `engine_desktop.py` | Importiert die bestehende `engine.py`, ersetzt die Viewer-Registerkarte und ergänzt zwei DFS-Eingabefelder, ohne die alte `engine.py` zu überschreiben. |
+| `engine.py` | Vereint Launcher, native Viewer-Registerkarte, Live-Dashboard und zwei DFS-Eingabefelder. `engine_desktop.py` ist ein kompatibler Starter. |
 | `README.md` | Start- und Funktionsbeschreibung aktualisiert. |
 | `docs/desktop_viewer.md` | Diese technische Dokumentation. |
 
-**Bewusst nicht ersetzt:** `engine.py`, `crawledDataViewer/viewer.py` und die Requirements-Dateien. Der bestehende Crawler-Funktionsumfang und die Inhaltsklassifikation bleiben erhalten, sein Scheduling ist jedoch bewusst geändert. Über `python engine.py` kann weiterhin der alte Viewer genutzt werden; der neue Notebook-Crawler verwendet auch dort Round-Robin-DFS mit Standardwerten.
+**Bewusst nicht ersetzt:** `crawledDataViewer/viewer.py` und die Requirements-Dateien. Der bestehende Crawler-Funktionsumfang und die Inhaltsklassifikation bleiben erhalten, sein Scheduling ist jedoch bewusst geändert. `python engine.py` startet nun die vereinheitlichte Oberfläche; der neue Notebook-Crawler verwendet dort Round-Robin-DFS mit Standardwerten.
 
 ## Installation / Übernahme der ZIP
 
 1. Bestehenden Repository-Ordner sichern oder Änderungen committen.
 2. ZIP **im Stammordner des Repositories entpacken**, dabei `crawler/crawler.ipynb` und `README.md` überschreiben.
 3. Die neuen Unterordnerpfade unverändert beibehalten. `engine.py` muss nach wie vor im Projektstamm liegen.
-4. Start über `python engine_desktop.py` (Windows mit Tkinter, Python 3.10+).
+4. Start über `python engine.py` (Windows mit Tkinter, Python 3.10+); `python engine_desktop.py` bleibt kompatibel.
 5. Im Tab **Crawled Data Viewer** Lauf auswählen oder auf **JSONL öffnen** klicken. Du kannst auch unabhängig davon `python crawledDataViewer/viewer_tk.py` starten.
 
 ### Bestehende Laufdaten

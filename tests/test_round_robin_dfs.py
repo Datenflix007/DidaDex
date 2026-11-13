@@ -144,6 +144,157 @@ class RoundRobinDfsTests(unittest.TestCase):
         finally:
             crawler.close()
 
+    def test_redirect_target_keeps_meaningful_terminal_slash(self):
+        canon = self.env['canon']
+        self.assertEqual(canon('https://a.test/lesson/'),
+                         'https://a.test/lesson')
+        self.assertEqual(canon('https://a.test/lesson/', preserve_trailing_slash=True),
+                         'https://a.test/lesson/')
+        self.assertEqual(canon('https://a.test//lesson///', preserve_trailing_slash=True),
+                         'https://a.test/lesson/')
+
+    def test_fetch_follows_terminal_slash_redirect_once(self):
+        crawler = self.new_crawler()
+
+        class Response:
+            def __init__(self, status_code, headers=None, body=b''):
+                self.status_code = status_code
+                self.headers = headers or {}
+                self.body = body
+                self.closed = False
+
+            def iter_content(self, _chunk_size):
+                if self.body:
+                    yield self.body
+
+            def close(self):
+                self.closed = True
+
+        class Session:
+            def __init__(self):
+                self.calls = []
+
+            def get(self, url, **_kwargs):
+                self.calls.append(url)
+                if url == 'https://a.test/lesson':
+                    return Response(301, {'Location': '/lesson/'})
+                if url == 'https://a.test/lesson/':
+                    return Response(200, {'Content-Type': 'text/html'}, b'<html>OK</html>')
+                raise AssertionError(f'unexpected request: {url}')
+
+        session = Session()
+        crawler.session = lambda: session
+        crawler.robots_allow = lambda _url: (True, 0)
+        try:
+            actual, body, headers = crawler.fetch('https://a.test/lesson', 'html')
+            self.assertEqual(actual, 'https://a.test/lesson/')
+            self.assertEqual(body, b'<html>OK</html>')
+            self.assertEqual(headers['Content-Type'], 'text/html')
+            self.assertEqual(session.calls,
+                             ['https://a.test/lesson', 'https://a.test/lesson/'])
+        finally:
+            crawler.close()
+
+    def test_fetch_stops_an_actual_redirect_loop_after_first_repeat(self):
+        crawler = self.new_crawler()
+
+        class Response:
+            status_code = 301
+            headers = {'Location': '/loop'}
+
+            def close(self):
+                pass
+
+        class Session:
+            def __init__(self):
+                self.calls = []
+
+            def get(self, url, **_kwargs):
+                self.calls.append(url)
+                return Response()
+
+        session = Session()
+        crawler.session = lambda: session
+        crawler.robots_allow = lambda _url: (True, 0)
+        try:
+            with self.assertRaisesRegex(ValueError, '^redirect_loop$'):
+                crawler.fetch('https://a.test/loop', 'html')
+            self.assertEqual(session.calls, ['https://a.test/loop'])
+        finally:
+            crawler.close()
+
+    def test_resume_requeues_only_legacy_redirect_errors(self):
+        crawler = self.new_crawler()
+        try:
+            old_redirect, other_error = self.env['SEEDS']
+            crawler.db.execute("UPDATE frontier SET status='error', error='too_many_redirects' WHERE url=?",
+                               (old_redirect,))
+            crawler.db.execute("UPDATE frontier SET status='error', error='HTTP_404' WHERE url=?",
+                               (other_error,))
+            crawler.db.commit()
+        finally:
+            crawler.close()
+
+        resumed = self.new_crawler()
+        try:
+            rows = dict(resumed.db.execute("SELECT url,status FROM frontier WHERE url IN (?,?)",
+                                           (old_redirect, other_error)))
+            self.assertEqual(resumed.requeued_legacy_redirects, 1)
+            self.assertEqual(rows[old_redirect], 'queued')
+            self.assertEqual(rows[other_error], 'error')
+        finally:
+            resumed.close()
+
+    def test_heatmap_uses_interval_unless_forced(self):
+        crawler = self.new_crawler()
+        try:
+            self.assertTrue(crawler.write_depth_heatmap())
+            self.assertFalse(crawler.write_depth_heatmap())
+            self.assertTrue(crawler.write_depth_heatmap(force=True))
+        finally:
+            crawler.close()
+
+    def test_robots_redirect_discovers_only_allowed_declared_sitemap(self):
+        self.env['SITEMAPS_AKTIV'] = True
+        self.env['MODUS'] = 'STANDARD'
+        crawler = self.new_crawler()
+
+        class Response:
+            def __init__(self, status_code, headers=None, text=''):
+                self.status_code = status_code
+                self.headers = headers or {}
+                self.text = text
+
+            def close(self):
+                pass
+
+        class Session:
+            def __init__(self):
+                self.calls = []
+
+            def get(self, url, **_kwargs):
+                self.calls.append(url)
+                if url == 'https://a.test/robots.txt':
+                    return Response(301, {'Location': 'https://b.test/robots.txt'})
+                if url == 'https://b.test/robots.txt':
+                    return Response(200, text=(
+                        'User-agent: *\nAllow: /\n'
+                        'Sitemap: https://b.test/sitemap-index.xml\n'
+                        'Sitemap: https://outside.test/sitemap.xml\n'))
+                raise AssertionError(f'unexpected request: {url}')
+
+        session = Session()
+        crawler.session = lambda: session
+        try:
+            self.assertEqual(crawler.robots_allow('https://a.test/lesson'), (True, 0.0))
+            row = crawler.db.execute("SELECT kind FROM frontier WHERE url=?",
+                                     ('https://b.test/sitemap-index.xml',)).fetchone()
+            self.assertEqual(row, ('sitemap',))
+            self.assertEqual(session.calls,
+                             ['https://a.test/robots.txt', 'https://b.test/robots.txt'])
+        finally:
+            crawler.close()
+
     def test_multiple_workers_keep_unique_frontier_rows(self):
         self.env['PROFILE']['workers']=3
         self.env['PROFILE']['max_pages']=20
@@ -175,6 +326,7 @@ class RoundRobinDfsTests(unittest.TestCase):
                        ('https://a.test/root','html',0,10,'','done'))
             db.execute("INSERT INTO frontier (url,kind,depth,priority,parent,status) VALUES (?,?,?,?,?,?)",
                        ('https://a.test/root/child','html',1,10,'https://a.test/root','queued'))
+        db.close()
         crawler=self.new_crawler()
         try:
             row=crawler.db.execute("SELECT root_seed FROM frontier WHERE url='https://a.test/root/child'").fetchone()
