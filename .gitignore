@@ -1,2 +1,4 @@
 .venv/
 crawler/outputs/
+crawler/.didadex_config_*.json
+crawler/.didadex_runner_*.py

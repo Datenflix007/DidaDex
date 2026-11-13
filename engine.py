@@ -1,10 +1,12 @@
-"""DidaDex – desktop launcher for the educational notebook crawler.
+"""DidaDex – desktop launcher for the canonical Python crawler.
 
 Place this file in the project root beside crawler/ and crawledDataViewer/.
 Python 3.10+; tkinter is provided by standard Python on Windows.
 Run: python engine.py
 """
 from __future__ import annotations
+
+# The legacy base launcher and desktop dashboard are intentionally unified here.
 
 import json
 import os
@@ -13,19 +15,21 @@ import re
 import shutil
 import subprocess
 import sys
-import tempfile
 import threading
 import time
 import webbrowser
 from datetime import datetime
 from pathlib import Path
 import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+from tkinter import messagebox, ttk
+
+from crawledDataViewer.live_dashboard import HTML_NAME, LiveDashboard, SnapshotMonitor
+from crawledDataViewer.viewer_tk import MaterialViewer
 
 ROOT = Path(__file__).resolve().parent
 CRAWLER_DIR = ROOT / 'crawler'
 VIEWER_DIR = ROOT / 'crawledDataViewer'
-DEFAULT_NOTEBOOK = CRAWLER_DIR / 'crawler.ipynb'
+CRAWLER_SCRIPT = CRAWLER_DIR / 'crawler.py'
 OUTPUT_ROOT = CRAWLER_DIR / 'outputs' / 'runs'
 VENV_DIR = ROOT / '.venv'
 PYTHON = VENV_DIR / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
@@ -46,80 +50,38 @@ PRESETS = {
 }
 
 
-def config_source(config: dict) -> str:
-    """Make the first notebook cell injectable without modifying the notebook."""
+def crawl_config_payload(config: dict) -> dict:
+    """Serialize GUI settings for the canonical crawler.py runtime."""
     cfg = dict(config)
-    profile = {k: int(cfg[k]) for k in ('runtime_minutes', 'max_pages', 'max_depth',
-                                         'workers', 'max_per_host', 'max_queue')}
-    lines = [
-        f'MODUS = {cfg["mode"]!r}', 'START_CRAWL = True',
-        f'RUN_NAME = {cfg["run_name"]!r}', f'TARGET_MIB = {int(cfg["target_mib"])}',
-    ]
-    for key in ('DOWNLOAD_MATERIALS', 'ONLY_OPEN_LICENSE_MATERIALS', 'CHECK_LICENSE_IN_PDFS',
-                'SITEMAPS_AKTIV', 'QUELLEN_UEBERGREIFEND', 'STORE_BINARY_MATERIALS', 'DYNAMIC_DEPTH', 'FAIR_HOST_SCHEDULING', 'INCLUDE_GENERAL_METHODS'):
-        lines.append(f'{key} = {bool(cfg[key])!r}')
-    for key in ('MIN_TEXT_CHARS', 'MAX_MATERIAL_MIB', 'MAX_TEXT_CHARS'):
-        lines.append(f'{key} = {int(cfg[key])!r}')
-    lines.append(f'SUBJECT_FILTER = {cfg["subjects"]!r}')
-    lines.extend(['DEPTH_SOFT_START = 5', 'DEPTH_HARD_LIMIT = 50',
-                  'DEPTH_HEATMAP_INTERVAL = 30',f'DOWNLOAD_DELAY_SECONDS = {float(cfg["DOWNLOAD_DELAY_SECONDS"])!r}',
-                  f'PROFILE = {profile!r}',
-                  'print(f"Konfiguration: {MODUS}, {PROFILE[\'runtime_minutes\']} min, Ziel {TARGET_MIB} MiB", flush=True)'])
-    return '\n'.join(lines) + '\n'
-
-
-def runner_source(notebook: Path, cfg: dict, signal_file: Path) -> str:
-    """Execute the actual notebook Python cells in order, preserving names and logic.
-
-    Notebook markdown and the original settings cell are intentionally skipped.
-    The stop monitor flips TeachingCrawler.stop to finish workers and export.
-    """
-    data = json.loads(notebook.read_text(encoding='utf-8-sig'))
-    cells = [(i, ''.join(cell.get('source', []))) for i, cell in enumerate(data['cells'])
-             if cell.get('cell_type') == 'code']
-    if not any('class TeachingCrawler' in text for _, text in cells):
-        raise ValueError('Notebook nicht kompatibel: Klasse TeachingCrawler fehlt.')
-    if not any('export_reports(' in text for _, text in cells):
-        raise ValueError('Notebook nicht kompatibel: Exportfunktion fehlt.')
-    # Run source, engine, offline tests, network crawl, and export. Do not require
-    # brittle fixed cell numbers; allow additions to the notebook.
-    chunks = [
-        'import threading, time, traceback\nfrom pathlib import Path\n',
-        f'_DIDA_STOP_FILE = Path({str(signal_file)!r})\n',
-        config_source(cfg),
-    ]
-    for n, source in cells:
-        if 'MODUS = "TEST"' in source and 'PROFILE = {' in source:
-            continue  # UI owns these settings
-        if 'import sys, subprocess, importlib.util' in source and 'REQUIRED =' in source:
-            continue  # dependencies installed by launcher, not during crawl
-        if 'STICHPROBE' in source and 'random' in source:
-            continue  # optional notebook preview, not part of the crawler
-        if 'runner = TeachingCrawler(OUTPUT_DIR)' in source:
-            source = source.replace(
-                '    try:\n        runner.crawl()',
-                '''    def _watch_stop():
-        while not runner.stop.is_set():
-            if _DIDA_STOP_FILE.exists():
-                print('Stoppsignal empfangen – Abschluss und Export werden vorbereitet.', flush=True)
-                runner.stop.set()
-                break
-            time.sleep(0.3)
-    threading.Thread(target=_watch_stop, daemon=True).start()
-    try:
-        runner.crawl()''')
-            # Verify indentation in the modified source is sane before run.
-            compile(source, f'notebook_cell_{n}', 'exec')
-        label = 'Netzlauf' if 'runner = TeachingCrawler' in source else (
-                'JSONL-Export' if 'export_reports(sqlite_path' in source else
-                'Offline-Selbsttests' if 'Offline-Tests bestanden' in source else
-                'Notebook-Abschnitt')
-        chunks.extend([f'print("@@STEP@@ {label} (Zelle {n+1})", flush=True)\n',
-                       f'\n# Notebook-Zelle {n+1}\n', source, '\n'])
-    chunks.append('print("@@DONE@@", flush=True)\n')
-    result = '\n'.join(chunks)
-    compile(result, str(notebook), 'exec')
-    return result
+    profile = {key: int(cfg[key]) for key in (
+        'runtime_minutes', 'max_pages', 'max_depth', 'workers', 'max_per_host', 'max_queue'
+    )}
+    default_turns = {'TEST': 15, 'STANDARD': 50, 'NACHT': 100}[cfg['mode']]
+    return {
+        'schema_version': 1,
+        'mode': cfg['mode'],
+        'run_name': cfg['run_name'],
+        'target_mib': int(cfg['target_mib']),
+        'profile': profile,
+        'seed_pages': int(cfg.get('seed_pages', default_turns)),
+        'dfs_depth_step': int(cfg.get('dfs_depth_step', 5)),
+        'DEPTH_SOFT_START': 5,
+        'DEPTH_HARD_LIMIT': 50,
+        'DEPTH_HEATMAP_INTERVAL': 30,
+        'RETRY_LEGACY_REDIRECT_ERRORS': True,
+        'MAX_ROBOTS_SITEMAPS_PER_HOST': 4,
+        'STORE_CRAWL_EDGES': False,
+        'DOWNLOAD_DELAY_SECONDS': float(cfg['DOWNLOAD_DELAY_SECONDS']),
+        'MIN_TEXT_CHARS': int(cfg['MIN_TEXT_CHARS']),
+        'MAX_MATERIAL_MIB': int(cfg['MAX_MATERIAL_MIB']),
+        'MAX_TEXT_CHARS': int(cfg['MAX_TEXT_CHARS']),
+        'subjects': list(cfg['subjects']),
+        **{key: bool(cfg[key]) for key in (
+            'DOWNLOAD_MATERIALS', 'ONLY_OPEN_LICENSE_MATERIALS', 'CHECK_LICENSE_IN_PDFS',
+            'SITEMAPS_AKTIV', 'QUELLEN_UEBERGREIFEND', 'STORE_BINARY_MATERIALS',
+            'DYNAMIC_DEPTH', 'FAIR_HOST_SCHEDULING', 'INCLUDE_GENERAL_METHODS',
+        )},
+    }
 
 
 class DidaDex(tk.Tk):
@@ -133,7 +95,7 @@ class DidaDex(tk.Tk):
         self.process = None
         self.viewer_process = None
         self.stop_file = None
-        self.runner_file = None
+        self.config_file = None
         self.running = False
         self.started_at = None
         self.crawl_started_at = None
@@ -141,7 +103,6 @@ class DidaDex(tk.Tk):
         self._last_error = ''
         self.mode = tk.StringVar(value='TEST')
         self.run_name = tk.StringVar(value=datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
-        self.notebook_path = tk.StringVar(value=str(DEFAULT_NOTEBOOK))
         self.runtime = tk.IntVar(value=10)
         self.pages = tk.IntVar(value=2500)
         self.depth = tk.IntVar(value=50)
@@ -157,7 +118,7 @@ class DidaDex(tk.Tk):
         self.license_only = tk.BooleanVar(value=True)
         self.license_pdf = tk.BooleanVar(value=True)
         self.sitemaps = tk.BooleanVar(value=True)
-        self.cross_hosts = tk.BooleanVar(value=True)
+        self.cross_hosts = tk.BooleanVar(value=False)
         self.save_binary = tk.BooleanVar(value=False)
         self.dynamic_depth = tk.BooleanVar(value=True)
         self.fair_hosts = tk.BooleanVar(value=True)
@@ -226,7 +187,7 @@ class DidaDex(tk.Tk):
             ttk.Entry(config, textvariable=var, width=12).grid(row=3, column=c, sticky='ew', padx=(0, 6))
         checks = (('Materialtext extrahieren', self.download), ('Nur offene Lizenzen', self.license_only),
                   ('PDF-Lizenz prüfen', self.license_pdf), ('Sitemaps', self.sitemaps),
-                  ('Freigegebene Hosts verbinden', self.cross_hosts), ('Binärdateien speichern', self.save_binary))
+                  ('Freigegebene Hosts verbinden (optional)', self.cross_hosts), ('Binärdateien speichern', self.save_binary))
         for c, (title, var) in enumerate(checks):
             ttk.Checkbutton(config, text=title, variable=var).grid(row=4+c//3, column=(c%3)*2,
                                                                    columnspan=2, sticky='w', pady=3)
@@ -239,17 +200,14 @@ class DidaDex(tk.Tk):
         ttk.Checkbutton(options_frame,text='Dynamische Tiefe bis 50',variable=self.dynamic_depth).pack(side='left',padx=5)
         ttk.Checkbutton(options_frame,text='Faire Host-Verteilung',variable=self.fair_hosts).pack(side='left',padx=5)
         ttk.Checkbutton(options_frame,text='Allgemeine Methoden einbeziehen',variable=self.include_general_methods).pack(side='left',padx=5)
-        ttk.Label(config, text='Notebook').grid(row=8, column=0, sticky='w', pady=(8, 0))
-        ttk.Entry(config, textvariable=self.notebook_path).grid(row=8, column=1, columnspan=6, sticky='ew', pady=(8, 0))
-        ttk.Button(config, text='Auswählen', command=self._select_notebook).grid(row=8, column=7, sticky='ew', pady=(8, 0))
         bar = ttk.Frame(config)
-        bar.grid(row=9, column=0, columnspan=8, sticky='ew', pady=(10, 0))
+        bar.grid(row=8, column=0, columnspan=8, sticky='ew', pady=(10, 0))
         self.start_btn = ttk.Button(bar, text='Crawler starten', command=self.start_crawl)
         self.start_btn.pack(side='left', padx=(0, 8))
         self.stop_btn = ttk.Button(bar, text='Sauber stoppen und exportieren', command=self.stop_crawl, state='disabled')
         self.stop_btn.pack(side='left', padx=(0, 8))
         ttk.Button(bar, text='Ausgabeordner öffnen', command=self.open_output).pack(side='left')
-        progress = ttk.LabelFrame(tab, text='2. Live-Fortschritt aus dem Notebook', padding=12)
+        progress = ttk.LabelFrame(tab, text='2. Live-Fortschritt aus crawler.py', padding=12)
         progress.grid(row=1, column=0, sticky='nsew')
         progress.rowconfigure(4, weight=1)
         progress.columnconfigure(0, weight=1)
@@ -293,12 +251,6 @@ class DidaDex(tk.Tk):
             variable.set(profile[name])
         self.run_name.set(datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
 
-    def _select_notebook(self):
-        value = filedialog.askopenfilename(title='Crawler-Notebook auswählen',
-                                           initialdir=str(CRAWLER_DIR), filetypes=[('Jupyter Notebook', '*.ipynb')])
-        if value:
-            self.notebook_path.set(value)
-
     def _settings(self):
         name = self.run_name.get().strip()
         if not re.fullmatch(r'[A-Za-z0-9_-]+', name):
@@ -341,18 +293,24 @@ class DidaDex(tk.Tk):
     def start_crawl(self):
         if self.running:
             return
+        config_file = None
         try:
             cfg = self._settings()
-            notebook = Path(self.notebook_path.get()).expanduser().resolve()
-            if not notebook.is_file():
-                raise FileNotFoundError(f'Notebook nicht gefunden: {notebook}')
-            # Validate before creating subprocess/venv.
+            if not CRAWLER_SCRIPT.is_file():
+                raise FileNotFoundError(f'Crawler-Skript nicht gefunden: {CRAWLER_SCRIPT}')
             stop_marker = CRAWLER_DIR / f'.didadex_stop_{cfg["run_name"]}'
-            script = runner_source(notebook, cfg, stop_marker)
+            config_file = CRAWLER_DIR / f'.didadex_config_{cfg["run_name"]}.json'
+            config_file.write_text(
+                json.dumps(crawl_config_payload(cfg), ensure_ascii=False, indent=2) + '\n',
+                encoding='utf-8',
+            )
         except Exception as exc:
+            if config_file:
+                config_file.unlink(missing_ok=True)
             messagebox.showerror('Ungültige Konfiguration', str(exc))
             return
-        self.stop_file = CRAWLER_DIR / f'.didadex_stop_{cfg["run_name"]}'
+        self.stop_file = stop_marker
+        self.config_file = config_file
         self.stop_file.unlink(missing_ok=True)
         self.running = True
         self.started_at = time.monotonic()
@@ -366,7 +324,7 @@ class DidaDex(tk.Tk):
         self.step.set('Virtuelle Umgebung und Abhängigkeiten prüfen')
         self.metrics.set('Abrufe: 0  |  Dokumente: 0  |  Korpus: 0 MiB')
         self._append_log(f'--- START: {cfg["mode"]} / {cfg["run_name"]} | Fächer: {cfg["subjects"] or ["Alle"]} ---')
-        threading.Thread(target=self._run_crawler, args=(script,), daemon=True).start()
+        threading.Thread(target=self._run_crawler, args=(config_file,), daemon=True).start()
 
     def _run_cmd(self, args, cwd, label, env=None):
         self._post('step', label)
@@ -381,8 +339,7 @@ class DidaDex(tk.Tk):
         if code != 0:
             raise RuntimeError(f'{label}: Prozess mit Exit-Code {code} beendet.')
 
-    def _run_crawler(self, script):
-        temp_file = None
+    def _run_crawler(self, config_file: Path):
         try:
             if not PYTHON.exists():
                 self._post('line', 'Erstelle projektweite virtuelle Umgebung ...')
@@ -390,25 +347,20 @@ class DidaDex(tk.Tk):
             requirements = [str(x) for x in CRAWLER_FALLBACK]
             pip_args = [str(PYTHON), '-m', 'pip', 'install', '--disable-pip-version-check', '-r', str(CRAWLER_REQUIREMENTS)] if CRAWLER_REQUIREMENTS.is_file() else [str(PYTHON), '-m', 'pip', 'install', '--disable-pip-version-check', *requirements]
             self._run_cmd(pip_args, ROOT, 'Crawler-Abhängigkeiten installieren')
-            # Notebook may need a dependency not represented in the requirements file.
             if CRAWLER_REQUIREMENTS.is_file():
-                self._run_cmd([str(PYTHON), '-m', 'pip', 'install', '--disable-pip-version-check', *requirements], ROOT, 'Notebook-Abhängigkeiten prüfen')
-            CRAWLER_DIR.mkdir(parents=True, exist_ok=True)
-            with tempfile.NamedTemporaryFile(mode='w', suffix='.py', prefix='.didadex_runner_',
-                                             encoding='utf-8', delete=False, dir=CRAWLER_DIR) as out:
-                out.write(script)
-                temp_file = Path(out.name)
-            self.runner_file = temp_file
+                self._run_cmd([str(PYTHON), '-m', 'pip', 'install', '--disable-pip-version-check', *requirements], ROOT, 'Crawler-Laufzeitabhängigkeiten prüfen')
             env = os.environ.copy()
             env['PYTHONUNBUFFERED'] = '1'
-            self._run_cmd([str(PYTHON), '-u', str(temp_file)], CRAWLER_DIR, 'Notebook-Crawler ausführen', env=env)
+            self._run_cmd([
+                str(PYTHON), '-u', str(CRAWLER_SCRIPT), '--config', str(config_file),
+                '--stop-file', str(self.stop_file),
+            ], CRAWLER_DIR, 'Crawler ausführen', env=env)
             self._post('completed')
         except Exception as exc:
             self._post('error', str(exc))
         finally:
-            if temp_file:
-                temp_file.unlink(missing_ok=True)
-            self.runner_file = None
+            config_file.unlink(missing_ok=True)
+            self.config_file = None
             if self.stop_file:
                 self.stop_file.unlink(missing_ok=True)
             self._post('finished')
@@ -420,7 +372,7 @@ class DidaDex(tk.Tk):
         self.status.set('Stopp angefordert – Crawl wird abgeschlossen und exportiert')
         self.stop_btn.configure(state='disabled')
         self._append_log('Stopp angefordert. Laufende Anfragen werden abgeschlossen; anschließend Export.')
-        # During pip/venv install no notebook has started; do not claim graceful stop there.
+        # During dependency setup no crawler has started; do not claim graceful stop there.
 
     def _pump(self):
         for _ in range(250):
@@ -432,7 +384,7 @@ class DidaDex(tk.Tk):
                 if payload.startswith('@@STEP@@ '):
                     self.step.set(payload.removeprefix('@@STEP@@ '))
                 elif payload == '@@DONE@@':
-                    self.step.set('Notebook vollständig ausgeführt')
+                    self.step.set('Crawler vollständig ausgeführt')
                 else:
                     self._append_log(payload)
                     self._parse_progress(payload)
@@ -531,5 +483,264 @@ class DidaDex(tk.Tk):
         self.destroy()
 
 
+_BaseDidaDex = DidaDex
+
+
+class DidaDexDesktop(_BaseDidaDex):
+    """Desktop UI with native viewer and a widescreen live dashboard."""
+
+    def __init__(self):
+        self._monitor = None
+        self._dashboard_queue = queue.Queue()
+        self._monitor_warning = ''
+        self._dashboard_visible = False
+        self._sash_positioned = False
+        super().__init__()
+        self.minsize(1040, 650)
+        self.after_idle(self._maximize_window)
+
+    def _maximize_window(self):
+        """Use a maximized window while keeping the title bar and taskbar."""
+        if sys.platform == 'win32':
+            try:
+                self.state('zoomed')
+                return
+            except tk.TclError:
+                pass
+        else:
+            try:
+                self.attributes('-zoomed', True)
+                if self.winfo_screenwidth() > 1300:
+                    return
+            except tk.TclError:
+                pass
+        width = max(1040, self.winfo_screenwidth() - 70)
+        height = max(650, self.winfo_screenheight() - 95)
+        self.geometry(f'{width}x{height}+20+20')
+
+    def _viewer_tab(self, tab):
+        self.native_viewer = MaterialViewer(tab, root=OUTPUT_ROOT)
+        self.native_viewer.pack(fill='both', expand=True)
+
+    def _crawler_tab(self, tab):
+        # The base engine still owns crawler execution, settings and events.
+        super()._crawler_tab(tab)
+        self.seed_pages = tk.IntVar(master=self, value=15)
+        self.dfs_depth_step = tk.IntVar(master=self, value=5)
+        self._crawler_panel = tab
+        panels = [widget for widget in tab.winfo_children() if isinstance(widget, ttk.LabelFrame)]
+        self._settings_panel = next((panel for panel in panels
+                                     if 'Einstellungen' in panel.cget('text')), None)
+        self._legacy_progress = next((panel for panel in panels
+                                      if 'Live-Fortschritt' in panel.cget('text')), None)
+        if self._settings_panel is None or self._legacy_progress is None:
+            raise RuntimeError('Das erwartete Crawler-Layout der Basis-Engine fehlt.')
+        self._legacy_log = self.log
+        self._legacy_pbar = self.pbar
+
+        section = ttk.Frame(self._settings_panel)
+        section.grid(row=9, column=0, columnspan=8, sticky='w', pady=(8, 0))
+        ttk.Label(section, text='DFS: Seiten pro Seed-Runde').pack(side='left', padx=(0, 5))
+        ttk.Entry(section, textvariable=self.seed_pages, width=7).pack(side='left', padx=(0, 18))
+        ttk.Label(section, text='Tiefenschritt pro Runde').pack(side='left', padx=(0, 5))
+        ttk.Entry(section, textvariable=self.dfs_depth_step, width=7).pack(side='left')
+
+        # Before a crawl keep the original settings and progress visible. Once
+        # running, they are replaced by a full-tab horizontal split view.
+        self._dashboard_shell = ttk.Frame(tab)
+        self._dashboard_shell.grid(row=0, column=0, rowspan=2, sticky='nsew')
+        self._dashboard_shell.rowconfigure(0, weight=1)
+        self._dashboard_shell.columnconfigure(0, weight=1)
+        self._split = ttk.Panedwindow(self._dashboard_shell, orient='horizontal')
+        self._split.grid(row=0, column=0, sticky='nsew')
+        self._monitor_panel = ttk.Frame(self._split)
+        self._console_panel = ttk.Frame(self._split, padding=(8, 8, 8, 8))
+        self._split.add(self._monitor_panel, weight=3)
+        self._split.add(self._console_panel, weight=2)
+
+        self._dashboard = LiveDashboard(
+            self._monitor_panel,
+            on_stop=self.stop_crawl,
+            on_settings=self._show_settings,
+            on_html=self._open_live_heatmap,
+            on_viewer=self.start_viewer,
+        )
+        self._dashboard.pack(fill='both', expand=True)
+        self._make_console(self._console_panel)
+        self._dashboard_shell.grid_remove()
+
+    def _make_console(self, parent):
+        """Dedicated console, retaining the base engine's StringVars."""
+        parent.rowconfigure(2, weight=1)
+        parent.columnconfigure(0, weight=1)
+        header = ttk.Frame(parent)
+        header.grid(row=0, column=0, sticky='ew', pady=(0, 10))
+        ttk.Label(header, text='Konsolenausgabe', font=('Segoe UI', 15, 'bold')).pack(side='left')
+        ttk.Label(header, text='LIVE', foreground='#0b8067',
+                  font=('Segoe UI', 9, 'bold')).pack(side='right', padx=6)
+
+        progress = ttk.LabelFrame(parent, text='Crawler-Status', padding=(12, 9))
+        progress.grid(row=1, column=0, sticky='ew', pady=(0, 9))
+        progress.columnconfigure(0, weight=1)
+        ttk.Label(progress, textvariable=self.status, font=('Segoe UI', 11, 'bold'),
+                  wraplength=450).grid(row=0, column=0, sticky='w', pady=(0, 5))
+        ttk.Label(progress, textvariable=self.step, wraplength=450).grid(
+            row=1, column=0, sticky='w', pady=(0, 5))
+        ttk.Label(progress, textvariable=self.metrics, wraplength=450).grid(
+            row=2, column=0, sticky='w', pady=(0, 7))
+        self.pbar = ttk.Progressbar(progress, maximum=100, mode='determinate')
+        self.pbar.grid(row=3, column=0, sticky='ew')
+
+        log_frame = ttk.Frame(parent)
+        log_frame.grid(row=2, column=0, sticky='nsew')
+        log_frame.rowconfigure(1, weight=1)
+        log_frame.columnconfigure(0, weight=1)
+        ttk.Label(log_frame, text='Terminal - fortlaufendes Protokoll',
+                  font=('Segoe UI', 10, 'bold')).grid(row=0, column=0, sticky='w', pady=(0, 7))
+        self.log = tk.Text(log_frame, wrap='word', bg='#101c2b', fg='#e5ebf5',
+                           insertbackground='white', selectbackground='#375574',
+                           font=('Consolas', 10), relief='flat', padx=12, pady=12,
+                           state='disabled')
+        self.log.grid(row=1, column=0, sticky='nsew')
+        scrollbar = ttk.Scrollbar(log_frame, orient='vertical', command=self.log.yview)
+        scrollbar.grid(row=1, column=1, sticky='ns')
+        self.log.configure(yscrollcommand=scrollbar.set)
+        footer = ttk.Frame(parent)
+        footer.grid(row=3, column=0, sticky='ew', pady=(8, 0))
+        self._auto_scroll = tk.BooleanVar(master=self, value=True)
+        ttk.Checkbutton(footer, text='Automatisch zum Ende scrollen',
+                        variable=self._auto_scroll).pack(side='left')
+        ttk.Button(footer, text='Protokoll kopieren',
+                   command=self._copy_log).pack(side='right')
+
+    def _copy_log(self):
+        value = self.log.get('1.0', 'end-1c')
+        self.clipboard_clear()
+        self.clipboard_append(value)
+
+    def _append_log(self, line):
+        """Preserve console scroll position when auto-scroll is disabled."""
+        if not hasattr(self, '_auto_scroll') or self._auto_scroll.get():
+            super()._append_log(line)
+        else:
+            position = self.log.yview()[0]
+            super()._append_log(line)
+            self.log.yview_moveto(position)
+
+    def _on_mode(self, *args):
+        super()._on_mode(*args)
+        self.seed_pages.set({'TEST': 15, 'STANDARD': 50, 'NACHT': 100}[self.mode.get()])
+
+    def _settings(self):
+        result = super()._settings()
+        pages = self.seed_pages.get()
+        step = self.dfs_depth_step.get()
+        if not 1 <= pages <= 1000:
+            raise ValueError('Seiten pro Seed-Runde: Wert zwischen 1 und 1000 noetig.')
+        if not 1 <= step <= 50:
+            raise ValueError('Tiefenschritt pro Runde: Wert zwischen 1 und 50 noetig.')
+        result['seed_pages'] = pages
+        result['dfs_depth_step'] = step
+        return result
+
+    def start_crawl(self):
+        if self.running:
+            return
+        super().start_crawl()
+        # Invalid input leaves the settings screen untouched.
+        if not self.running:
+            return
+        self._show_dashboard()
+        if self._monitor:
+            self._monitor.stop()
+        self._dashboard_queue = queue.Queue()
+        self._monitor = SnapshotMonitor(OUTPUT_ROOT / self.run_name.get(), self._dashboard_queue)
+        self._monitor.start()
+
+    def _show_dashboard(self):
+        self._settings_panel.grid_remove()
+        self._legacy_progress.grid_remove()
+        self._dashboard_shell.grid()
+        self._crawler_panel.rowconfigure(0, weight=1)
+        self._crawler_panel.rowconfigure(1, weight=0)
+        self._dashboard_visible = True
+        self._dashboard.set_running(self.running)
+        self._sash_positioned = False
+        self.after(80, self._set_initial_sash)
+        self._dashboard.focus_set()
+
+    def _set_initial_sash(self):
+        if self._sash_positioned or not self._dashboard_visible:
+            return
+        width = self._split.winfo_width()
+        if width < 500:
+            self.after(150, self._set_initial_sash)
+            return
+        try:
+            self._split.sashpos(0, round(width * 0.60))
+            self._sash_positioned = True
+        except tk.TclError:
+            self.after(150, self._set_initial_sash)
+
+    def _show_settings(self):
+        if self.running:
+            messagebox.showinfo('Crawler aktiv', 'Bitte den Crawl erst sauber abschliessen.')
+            return
+        if self._monitor:
+            self._monitor.stop()
+            self._monitor = None
+        self._dashboard_shell.grid_remove()
+        self._settings_panel.grid()
+        self._legacy_progress.grid()
+        self._crawler_panel.rowconfigure(0, weight=0)
+        self._crawler_panel.rowconfigure(1, weight=1)
+        self._dashboard_visible = False
+        # Keep a copy of the last dashboard messages in the legacy log.
+        self._legacy_pbar['value'] = self.pbar['value']
+        self._legacy_log.configure(state='normal')
+        self._legacy_log.delete('1.0', 'end')
+        self._legacy_log.insert('end', self.log.get('1.0', 'end-1c'))
+        self._legacy_log.see('end')
+        self._legacy_log.configure(state='disabled')
+
+    def _open_live_heatmap(self):
+        path = OUTPUT_ROOT / self.run_name.get() / HTML_NAME
+        if not path.is_file():
+            messagebox.showinfo('Noch keine Heatmap',
+                                'Die HTML-Heatmap wird erstellt, sobald Crawl-Daten vorliegen.')
+            return
+        webbrowser.open(path.resolve().as_uri())
+
+    def _pump(self):
+        # The base pump owns process events. Drain the monitoring queue on Tk's
+        # main thread afterwards.
+        super()._pump()
+        newest = None
+        for _ in range(100):
+            try:
+                kind, payload = self._dashboard_queue.get_nowait()
+            except queue.Empty:
+                break
+            if kind == 'snapshot':
+                newest = payload
+            elif kind == 'warning' and payload != self._monitor_warning:
+                self._monitor_warning = payload
+                self._append_log('[Dashboard] ' + payload)
+        if newest is not None and self._dashboard_visible:
+            self._dashboard.update_snapshot(newest)
+        if self._dashboard_visible:
+            self._dashboard.set_running(self.running)
+
+    def start_viewer(self):
+        self.tabs.select(1)
+        self.native_viewer.refresh_runs(initial_run=self.run_name.get())
+        self.viewer_status.set('Lokaler Tkinter-Viewer im Tab Crawled Data Viewer.')
+
+    def _close(self):
+        if not self.running and self._monitor:
+            self._monitor.stop()
+        super()._close()
+
+
 if __name__ == '__main__':
-    DidaDex().mainloop()
+    DidaDexDesktop().mainloop()

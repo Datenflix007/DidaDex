@@ -13,11 +13,11 @@ Didaktisch-methodische Suchmaschine für Unterrichtsmaterialien – lokaler Craw
 python engine_desktop.py
 ```
 
-Die Desktop-Variante verwendet die vorhandene `engine.py` für Start, Stop, Export, Worker und Fachauswahl, ergänzt zwei Round-Robin-DFS-Parameter und zeigt den Materialviewer **direkt im Tkinter-Tab** ohne Browser oder Streamlit.
+`engine.py` vereint Start, Stop, Export, Worker, Fachauswahl, die beiden Round-Robin-DFS-Parameter, den nativen Materialviewer und das Live-Dashboard. `engine_desktop.py` ist ein kompatibler Starter und öffnet dieselbe Oberfläche.
 
-Alternativ lässt sich die **bisherige** `engine.py` weiterhin mit `python engine.py` starten; die neuen DFS-Standardwerte bleiben auch dort aktiv. Der bisherige Streamlit-Viewer bleibt als Rückfalloption vorhanden. Die Engine legt bei Bedarf eine `.venv` an und installiert Crawler-Abhängigkeiten aus `crawler/requirements_crawler.txt`.
+Auch `python engine.py` startet die vollständige Desktop-Oberfläche. Der bisherige Streamlit-Viewer bleibt als Rückfalloption vorhanden. Die Engine legt bei Bedarf eine `.venv` an und installiert Crawler-Abhängigkeiten aus `crawler/requirements_crawler.txt`.
 
-**Notebook direkt:** `crawler/crawler.ipynb` in Jupyter öffnen, erste Einstellungszelle konfigurieren und „Run All“ ausführen. Im Notebook benötigte Pakete werden im aktiven Kernel installiert.
+**Crawler direkt:** `python crawler/crawler.py` startet den kanonischen Python-Crawler mit dem TEST-Standardprofil. Das Desktop-Fenster übergibt seine Laufkonfiguration als kleine temporäre JSON-Datei an dieselbe Datei. `crawler/crawler.ipynb` bleibt nur als historische Referenz erhalten und wird nicht mehr vom Desktop gestartet.
 
 ## Neu: Live-Dashboard während des Crawls
 
@@ -25,7 +25,7 @@ Nach **Crawler starten** tauscht `engine_desktop.py` die große Einstellungsmask
 
 Die Dashboard-Daten stammen aus der bestehenden SQLite-Datenbank und einer kleinen zusätzlich erzeugten Statusdatei. Neben der bisherigen `depth_heatmap.html` wird `depth_heatmap_live.html` alle etwa drei Sekunden neu erzeugt. Die HTML-Datei lässt sich optional über den Button öffnen; **für die Heatmap im Python-Fenster wird kein Browser benötigt**.
 
-Technische Details und die genaue Bedeutung der Kennzahlen: [`docs/live_dashboard.md`](docs/live_dashboard.md). `engine.py` weiterhin behalten, denn `engine_desktop.py` importiert diese Datei.
+Technische Details und die genaue Bedeutung der Kennzahlen: [`docs/live_dashboard.md`](docs/live_dashboard.md). Die Implementierung liegt in `engine.py`; `engine_desktop.py` bleibt als kompatibler Startweg erhalten.
 
 ## Neu: Round-Robin-DFS pro Seed
 
@@ -37,7 +37,11 @@ Der Crawler verarbeitet nicht mehr alle Seeds zuerst nach Tiefe 0. Stattdessen w
 | STANDARD | 50 | 5 |
 | NACHT | 100 | 5 |
 
-**Im Desktop-Fenster** die Felder `DFS: Seiten pro Seed-Runde` und `Tiefenschritt pro Runde` verwenden. **Im Notebook**: `DFS_DEPTH_STEP` und `PROFILE[MODUS]['pages_per_seed_turn']` in der ersten Codezelle ändern. Ein Tiefenschritt von 5 bedeutet zunächst Tiefen 0–5, danach 0–10 usw.; erledigte URLs werden nicht wiederholt.
+**Im Desktop-Fenster** die Felder `DFS: Seiten pro Seed-Runde` und `Tiefenschritt pro Runde` verwenden. Die direkte Ausführung kann dieselben Werte über eine Laufkonfigurations-JSON an `crawler.py` übergeben. Ein Tiefenschritt von 5 bedeutet zunächst Tiefen 0–5, danach 0–10 usw.; erledigte URLs werden nicht wiederholt.
+
+Offene, zulässige und einem Seed zugeordnete URLs bleiben in der persistenten Frontier. Sie werden in späteren Round-Robin-Runden mit wachsender Tiefengrenze weiter berücksichtigt, statt nach einer ersten flachen Runde liegen zu bleiben. Vollständig abgearbeitet werden sie, sofern keine Laufzeit-, Seiten-, Queue-, Host-, `robots.txt`-, Relevanz- oder Tiefengrenze greift.
+
+**Beobachteter Testlauf:** Mit 10 Workern wurden in fünf Minuten etwa **2,5 MiB** Korpusdaten gesammelt. Das ist ein Ergebnis dieser konkreten Konfiguration, kein garantierter Durchsatz oder eine Zusage für jede Quelle.
 
 **Wichtig:** Auch ein zweiminütiger Testlauf kann wenige *indexierte* Dokumente enthalten, obwohl deutlich mehr Webseiten besucht wurden. Die Qualitätsfilterung, die URL-Deduplizierung, die kuratierte Seed-Liste, `robots.txt`, Host-Pausen und die bisherige Lizenzbehandlung wurden nicht bewusst gelockert. Die Suchqualität muss anhand einer Stichprobe beurteilt werden.
 
@@ -48,7 +52,7 @@ Der Crawler verarbeitet nicht mehr alle Seeds zuerst nach Tiefe 0. Stattdessen w
 - Durchsuchte Tiefen: `depth_heatmap.html`, `depth_heatmap.tsv`, `depth_heatmap.json`
 - Laufprotokoll: `progress.log`
 
-Dieselbe `RUN_NAME`-Kennung setzt die Datenbank fort; eine neue Kennung ergibt einen separaten Versuch. Laufdaten werden nicht mit dieser ZIP geliefert. Die SQLite-Tabellen `frontier` und `seed_schedule` erhalten neue Zuordnungen und Rundeninformationen. **Vor dem Überschreiben eine Sicherheitskopie des Projekts und bestehender Laufdaten anlegen.** Eine ältere `engine.py` kennt das neue Datenbankschema nicht; alte Notebook-Versionen sollten mit derselben Laufdatenbank nicht erneut gestartet werden.
+Dieselbe `RUN_NAME`-Kennung setzt die Datenbank fort; eine neue Kennung ergibt einen separaten Versuch. Laufdaten werden nicht mit dieser ZIP geliefert. Die SQLite-Tabellen `frontier` und `seed_schedule` erhalten neue Zuordnungen und Rundeninformationen. **Vor dem Überschreiben eine Sicherheitskopie des Projekts und bestehender Laufdaten anlegen.** Ältere `engine.py`- oder `crawler.py`-Versionen sollten mit derselben Laufdatenbank nicht erneut gestartet werden.
 
 ## Materialviewer
 
@@ -68,7 +72,7 @@ Die ZIP-Datei **im Hauptordner des GitHub-Repositories** entpacken; die darin en
 python -m unittest discover -s tests -v
 ```
 
-Ausführliche Erläuterung: [`docs/crawling_strategy.md`](docs/crawling_strategy.md). Desktop-Viewer: [`docs/desktop_viewer.md`](docs/desktop_viewer.md).
+Ausführliche Erläuterung: [Workflow und Pipeline](docs/crawling_workflow_pipeline.md), [Round-Robin-DFS](docs/crawling_strategy.md), [Live-Dashboard](docs/live_dashboard.md) und [Desktop-Viewer](docs/desktop_viewer.md).
 
 ## Hinweise
 
@@ -78,4 +82,4 @@ Fachzuordnung und Qualitätsbewertung sind heuristisch, keine validierten Klassi
 
 `python engine_desktop.py` öffnet DidaDex standardmäßig maximiert. Nach Crawl-Start erscheint **links** (60 %) die vergrößerte Live-Statistik mit Tiefen-Heatmap, **rechts** (40 %) die fortlaufende Terminalausgabe mit Fortschrittsanzeige. Die Trennlinie ist verschiebbar; die Konsole kann automatisch ans Ende scrollen oder zum Kopieren angehalten werden. Die Einstellungen bleiben vor dem Start und nach dem Lauf erreichbar.
 
-Für dieses Layout-Update nur `engine_desktop.py` und `crawledDataViewer/live_dashboard.py` ersetzen. `engine.py`, `crawler/crawler.ipynb` und bisherige Crawl-Daten **nicht** löschen oder überschreiben. Einzelheiten: `docs/live_dashboard.md`.
+Für dieses Layout-Update nur die genannten Dateien ersetzen. `engine.py`, `crawler/crawler.py`, `crawler/config/` und bisherige Crawl-Daten **nicht** löschen oder überschreiben. Einzelheiten: `docs/live_dashboard.md`.

@@ -1,0 +1,1830 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "zum_unterrichten": {
+      "hosts": [
+        "unterrichten.zum.de"
+      ],
+      "seeds": [
+        "https://unterrichten.zum.de/wiki/Unterrichtsideen",
+        "https://unterrichten.zum.de/wiki/Methode",
+        "https://unterrichten.zum.de/wiki/Kategorie:Lernpfad",
+        "https://unterrichten.zum.de/wiki/Kategorie:Unterrichtsidee",
+        "https://unterrichten.zum.de/wiki/Kategorie:Methode",
+        "https://unterrichten.zum.de/wiki/Informatik",
+        "https://unterrichten.zum.de/wiki/Geschichte",
+        "https://unterrichten.zum.de/wiki/Deutsch",
+        "https://unterrichten.zum.de/wiki/Mathematik",
+        "https://unterrichten.zum.de/wiki/Ethik",
+        "https://unterrichten.zum.de/wiki/Geographie",
+        "https://unterrichten.zum.de/wiki/Lernpfad",
+        "https://unterrichten.zum.de/wiki/Industrielle_Revolution",
+        "https://unterrichten.zum.de/wiki/Einführung_in_die_Automatentheorie",
+        "https://unterrichten.zum.de/wiki/Kategorie:Informatik",
+        "https://unterrichten.zum.de/wiki/Kategorie:Arbeitsblatt"
+      ]
+    },
+    "zum_deutsch_lernen": {
+      "hosts": [
+        "deutsch-lernen.zum.de"
+      ],
+      "seeds": [
+        "https://deutsch-lernen.zum.de/wiki/Unterrichtsmethoden",
+        "https://deutsch-lernen.zum.de/wiki/Methoden-_und_Spielekiste",
+        "https://deutsch-lernen.zum.de/wiki/Kategorie:Methoden",
+        "https://deutsch-lernen.zum.de/wiki/Kategorie:Methoden_und_Spiele",
+        "https://deutsch-lernen.zum.de/wiki/Übung",
+        "https://deutsch-lernen.zum.de/wiki/Gruppenpuzzle",
+        "https://deutsch-lernen.zum.de/wiki/Stationenlernen"
+      ]
+    },
+    "serlo": {
+      "hosts": [
+        "de.serlo.org"
+      ],
+      "seeds": [
+        "https://de.serlo.org/",
+        "https://de.serlo.org/mathe",
+        "https://de.serlo.org/informatik",
+        "https://de.serlo.org/biologie",
+        "https://de.serlo.org/chemie",
+        "https://de.serlo.org/informatik",
+        "https://de.serlo.org/biologie",
+        "https://de.serlo.org/physik"
+      ]
+    },
+    "segu_geschichte": {
+      "hosts": [
+        "segu-geschichte.de",
+        "www.segu-geschichte.de"
+      ],
+      "seeds": [
+        "https://segu-geschichte.de/",
+        "https://segu-geschichte.de/arbeitsblaetter/",
+        "https://segu-geschichte.de/lernbausteine/"
+      ]
+    },
+    "edulabs": {
+      "hosts": [
+        "edulabs.de",
+        "www.edulabs.de"
+      ],
+      "seeds": [
+        "https://edulabs.de/oer/",
+        "https://edulabs.de/blog/"
+      ]
+    },
+    "digitallearninglab": {
+      "hosts": [
+        "digitallearninglab.de",
+        "www.digitallearninglab.de"
+      ],
+      "seeds": [
+        "https://digitallearninglab.de/unterrichtsbausteine",
+        "https://digitallearninglab.de/unterrichtsbausteine/programmieren-mit-logo",
+        "https://digitallearninglab.de/unterrichtsbausteine/gib-den-stick-weiter-freies-schreiben-und-fortsetz"
+      ]
+    },
+    "planet_schule": {
+      "hosts": [
+        "planet-schule.de",
+        "www.planet-schule.de"
+      ],
+      "seeds": [
+        "https://www.planet-schule.de/index.html",
+        "https://www.planet-schule.de/schwerpunkt/marie-meets-marx/arbeit-unterricht-100.html"
+      ]
+    },
+    "bpb": {
+      "hosts": [
+        "bpb.de",
+        "www.bpb.de"
+      ],
+      "seeds": [
+        "https://www.bpb.de/lernen/angebote/",
+        "https://www.bpb.de/shop/materialien/themenblaetter/",
+        "https://www.bpb.de/shop/materialien/themenblaetter/311145/die-themenblaetter-als-oer/",
+        "https://www.bpb.de/lernen/",
+        "https://www.bpb.de/shop/materialien/themenblaetter/"
+      ]
+    },
+    "lehrerfortbildung_bw": {
+      "hosts": [
+        "lehrerfortbildung-bw.de",
+        "www.lehrerfortbildung-bw.de"
+      ],
+      "seeds": [
+        "https://lehrerfortbildung-bw.de/u_matnatech/",
+        "https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1/",
+        "https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb2/",
+        "https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb2/z_download/"
+      ]
+    },
+    "medien_in_die_schule": {
+      "hosts": [
+        "www.medien-in-die-schule.de",
+        "medien-in-die-schule.de"
+      ],
+      "seeds": [
+        "https://www.medien-in-die-schule.de/unterrichtseinheiten/",
+        "https://www.medien-in-die-schule.de/unterrichtseinheiten/jugendliche-online/",
+        "https://www.medien-in-die-schule.de/unterrichtseinheiten/jugendliche-online/modul-1-persoenliche-daten/",
+        "https://www.medien-in-die-schule.de/unterrichtseinheiten/jugendliche-online/uebersicht-aller-material-und-arbeitsblaetter/",
+        "https://www.medien-in-die-schule.de/unterrichtseinheiten/meinung-im-netz-gestalten/",
+        "https://www.medien-in-die-schule.de/unterrichtseinheiten/meinung-im-netz-gestalten/uebersicht-aller-material-und-arbeitsblaetter/",
+        "https://www.medien-in-die-schule.de/downloads/",
+        "https://www.medien-in-die-schule.de/downloads/"
+      ]
+    },
+    "klicksafe": {
+      "hosts": [
+        "www.klicksafe.de",
+        "klicksafe.de"
+      ],
+      "seeds": [
+        "https://www.klicksafe.de/materialien",
+        "https://www.klicksafe.de/materialien/wo-ist-klaus"
+      ]
+    },
+    "bildungsserver_berlin_brandenburg": {
+      "hosts": [
+        "bildungsserver.berlin-brandenburg.de"
+      ],
+      "seeds": [
+        "https://bildungsserver.berlin-brandenburg.de/unterrichtsmaterialien",
+        "https://bildungsserver.berlin-brandenburg.de/17067",
+        "https://bildungsserver.berlin-brandenburg.de/sonderpaedagogik/medienbildung-im-sonderpaedagogischen-foerderschwerpunkt-geistige-entwicklung"
+      ]
+    },
+    "bildungsserver_rlp": {
+      "hosts": [
+        "bildung.rlp.de"
+      ],
+      "seeds": [
+        "https://bildung.rlp.de/unterricht",
+        "https://bildung.rlp.de/unterricht/faecher",
+        "https://bildung.rlp.de/verbraucherbildung/richtlinien-und-materialien"
+      ]
+    },
+    "bildungsserver_hessen": {
+      "hosts": [
+        "lernarchiv.bildung.hessen.de"
+      ],
+      "seeds": [
+        "https://lernarchiv.bildung.hessen.de/",
+        "https://lernarchiv.bildung.hessen.de/grundschule"
+      ]
+    },
+    "deutscher_bildungsserver": {
+      "hosts": [
+        "www.bildungsserver.de",
+        "bildungsserver.de"
+      ],
+      "seeds": [
+        "https://www.bildungsserver.de/schule/unterricht-634-de.html",
+        "https://www.bildungsserver.de/schule/grundschule-unterrichtsmaterial-1661-de.html"
+      ]
+    },
+    "kinofenster": {
+      "hosts": [
+        "www.kinofenster.de",
+        "kinofenster.de"
+      ],
+      "seeds": [
+        "https://www.kinofenster.de/unterrichten/",
+        "https://www.kinofenster.de/unterrichten/unterrichtsmaterial",
+        "https://www.kinofenster.de/unterricht/"
+      ]
+    },
+    "hanisauland": {
+      "hosts": [
+        "www.hanisauland.de",
+        "hanisauland.de"
+      ],
+      "seeds": [
+        "https://www.hanisauland.de/lehrer-innen/",
+        "https://www.hanisauland.de/lehrer-innen/unterrichtsmaterial/lehrer-innen-materialien-bestellen"
+      ]
+    },
+    "bildung_lsa": {
+      "hosts": [
+        "www.bildung-lsa.de",
+        "bildung-lsa.de"
+      ],
+      "seeds": [
+        "https://www.bildung-lsa.de/informationsportal/schule/schulentwicklung/digitalassistenz/freie_bildungsmaterialien.htm"
+      ]
+    },
+    "environment_education": {
+      "hosts": [
+        "www.umwelt-im-unterricht.de",
+        "umwelt-im-unterricht.de"
+      ],
+      "seeds": [
+        "https://www.umwelt-im-unterricht.de/",
+        "https://www.umwelt-im-unterricht.de/unterrichtsvorschlaege/",
+        "https://www.umwelt-im-unterricht.de/materialien/"
+      ]
+    },
+    "siemens_open_mint": {
+      "hosts": [
+        "medienportal.siemens-stiftung.org"
+      ],
+      "seeds": [
+        "https://medienportal.siemens-stiftung.org/de/home"
+      ]
+    }
+  },
+  "extended_sources": [
+    {
+      "source_id": "schule_bw",
+      "priority": "P0",
+      "hosts": [
+        "schule-bw.de",
+        "www.schule-bw.de"
+      ],
+      "seeds": [
+        "https://www.schule-bw.de/"
+      ]
+    },
+    {
+      "source_id": "lmz_bw",
+      "priority": "P1",
+      "hosts": [
+        "lmz-bw.de",
+        "www.lmz-bw.de"
+      ],
+      "seeds": [
+        "https://www.lmz-bw.de/"
+      ]
+    },
+    {
+      "source_id": "zsl_bw",
+      "priority": "P1",
+      "hosts": [
+        "zsl-bw.de",
+        "www.zsl-bw.de"
+      ],
+      "seeds": [
+        "https://zsl-bw.de/"
+      ]
+    },
+    {
+      "source_id": "isb_bayern",
+      "priority": "P0",
+      "hosts": [
+        "isb.bayern.de",
+        "www.isb.bayern.de"
+      ],
+      "seeds": [
+        "https://www.isb.bayern.de/"
+      ]
+    },
+    {
+      "source_id": "mebis_bayern",
+      "priority": "P1",
+      "hosts": [
+        "mebis.bayern.de",
+        "www.mebis.bayern.de"
+      ],
+      "seeds": [
+        "https://www.mebis.bayern.de/"
+      ]
+    },
+    {
+      "source_id": "medienbildung_bayern",
+      "priority": "P1",
+      "hosts": [
+        "medienbildung.bayern.de",
+        "www.medienbildung.bayern.de"
+      ],
+      "seeds": [
+        "https://www.medienbildung.bayern.de/"
+      ]
+    },
+    {
+      "source_id": "lisum_berlin_brandenburg",
+      "priority": "P1",
+      "hosts": [
+        "lisum.berlin-brandenburg.de"
+      ],
+      "seeds": [
+        "https://lisum.berlin-brandenburg.de/"
+      ]
+    },
+    {
+      "source_id": "sen_bildung_berlin",
+      "priority": "P1",
+      "hosts": [
+        "berlin.de",
+        "www.berlin.de"
+      ],
+      "seeds": [
+        "https://www.berlin.de/sen/bildung/"
+      ]
+    },
+    {
+      "source_id": "bildungsministerium_brandenburg",
+      "priority": "P1",
+      "hosts": [
+        "mbjs.brandenburg.de"
+      ],
+      "seeds": [
+        "https://mbjs.brandenburg.de/"
+      ]
+    },
+    {
+      "source_id": "lis_bremen",
+      "priority": "P0",
+      "hosts": [
+        "lis.bremen.de",
+        "www.lis.bremen.de"
+      ],
+      "seeds": [
+        "https://www.lis.bremen.de/"
+      ]
+    },
+    {
+      "source_id": "bildung_bremen",
+      "priority": "P1",
+      "hosts": [
+        "bildung.bremen.de",
+        "www.bildung.bremen.de"
+      ],
+      "seeds": [
+        "https://www.bildung.bremen.de/"
+      ]
+    },
+    {
+      "source_id": "li_hamburg",
+      "priority": "P0",
+      "hosts": [
+        "li.hamburg.de"
+      ],
+      "seeds": [
+        "https://li.hamburg.de/"
+      ]
+    },
+    {
+      "source_id": "hamburg_bildung",
+      "priority": "P1",
+      "hosts": [
+        "hamburg.de",
+        "www.hamburg.de"
+      ],
+      "seeds": [
+        "https://www.hamburg.de/bildung/"
+      ]
+    },
+    {
+      "source_id": "hamburger_bildungsserver",
+      "priority": "P2",
+      "hosts": [
+        "bildungsserver.hamburg.de"
+      ],
+      "seeds": [
+        "https://bildungsserver.hamburg.de/"
+      ]
+    },
+    {
+      "source_id": "kultus_hessen",
+      "priority": "P0",
+      "hosts": [
+        "kultus.hessen.de"
+      ],
+      "seeds": [
+        "https://kultus.hessen.de/"
+      ]
+    },
+    {
+      "source_id": "medienbildung_hessen",
+      "priority": "P1",
+      "hosts": [
+        "medien.bildung.hessen.de"
+      ],
+      "seeds": [
+        "https://medien.bildung.hessen.de/"
+      ]
+    },
+    {
+      "source_id": "bildung_mv",
+      "priority": "P0",
+      "hosts": [
+        "bildung-mv.de",
+        "www.bildung-mv.de"
+      ],
+      "seeds": [
+        "https://www.bildung-mv.de/"
+      ]
+    },
+    {
+      "source_id": "ministerium_bildung_mv",
+      "priority": "P1",
+      "hosts": [
+        "regierung-mv.de",
+        "www.regierung-mv.de"
+      ],
+      "seeds": [
+        "https://www.regierung-mv.de/Landesregierung/bm/"
+      ]
+    },
+    {
+      "source_id": "medienanstalt_mv",
+      "priority": "P2",
+      "hosts": [
+        "medienanstalt-mv.de",
+        "www.medienanstalt-mv.de"
+      ],
+      "seeds": [
+        "https://www.medienanstalt-mv.de/"
+      ]
+    },
+    {
+      "source_id": "nibis",
+      "priority": "P0",
+      "hosts": [
+        "nibis.de",
+        "www.nibis.de"
+      ],
+      "seeds": [
+        "https://www.nibis.de/"
+      ]
+    },
+    {
+      "source_id": "nlq_niedersachsen",
+      "priority": "P1",
+      "hosts": [
+        "nlq.niedersachsen.de",
+        "www.nlq.niedersachsen.de"
+      ],
+      "seeds": [
+        "https://www.nlq.niedersachsen.de/"
+      ]
+    },
+    {
+      "source_id": "bildungsportal_niedersachsen",
+      "priority": "P1",
+      "hosts": [
+        "bildungsportal-niedersachsen.de"
+      ],
+      "seeds": [
+        "https://bildungsportal-niedersachsen.de/"
+      ]
+    },
+    {
+      "source_id": "schulministerium_nrw",
+      "priority": "P0",
+      "hosts": [
+        "schulministerium.nrw",
+        "www.schulministerium.nrw"
+      ],
+      "seeds": [
+        "https://www.schulministerium.nrw/"
+      ]
+    },
+    {
+      "source_id": "qualis_nrw",
+      "priority": "P0",
+      "hosts": [
+        "qua-lis.nrw.de",
+        "www.qua-lis.nrw.de"
+      ],
+      "seeds": [
+        "https://www.qua-lis.nrw.de/"
+      ]
+    },
+    {
+      "source_id": "medienberatung_nrw",
+      "priority": "P1",
+      "hosts": [
+        "medienberatung.nrw.de",
+        "www.medienberatung.nrw.de"
+      ],
+      "seeds": [
+        "https://www.medienberatung.nrw.de/"
+      ]
+    },
+    {
+      "source_id": "medienkompetenzrahmen_nrw",
+      "priority": "P1",
+      "hosts": [
+        "medienkompetenzrahmen.nrw",
+        "www.medienkompetenzrahmen.nrw"
+      ],
+      "seeds": [
+        "https://www.medienkompetenzrahmen.nrw/"
+      ]
+    },
+    {
+      "source_id": "schulentwicklung_nrw",
+      "priority": "P2",
+      "hosts": [
+        "schulentwicklung.nrw.de",
+        "www.schulentwicklung.nrw.de"
+      ],
+      "seeds": [
+        "https://www.schulentwicklung.nrw.de/"
+      ]
+    },
+    {
+      "source_id": "pl_rlp",
+      "priority": "P1",
+      "hosts": [
+        "pl.rlp.de"
+      ],
+      "seeds": [
+        "https://pl.rlp.de/"
+      ]
+    },
+    {
+      "source_id": "inf_schule",
+      "priority": "P0",
+      "hosts": [
+        "inf-schule.de",
+        "www.inf-schule.de"
+      ],
+      "seeds": [
+        "https://www.inf-schule.de/"
+      ]
+    },
+    {
+      "source_id": "bildung_saarland",
+      "priority": "P0",
+      "hosts": [
+        "saarland.de",
+        "www.saarland.de"
+      ],
+      "seeds": [
+        "https://www.saarland.de/mbk/DE/home/home_node.html"
+      ]
+    },
+    {
+      "source_id": "lpm_saarland",
+      "priority": "P1",
+      "hosts": [
+        "lpm.uni-sb.de",
+        "www.lpm.uni-sb.de"
+      ],
+      "seeds": [
+        "https://www.lpm.uni-sb.de/"
+      ]
+    },
+    {
+      "source_id": "schule_sachsen",
+      "priority": "P0",
+      "hosts": [
+        "schule.sachsen.de",
+        "www.schule.sachsen.de"
+      ],
+      "seeds": [
+        "https://www.schule.sachsen.de/"
+      ]
+    },
+    {
+      "source_id": "medienbildung_sachsen",
+      "priority": "P1",
+      "hosts": [
+        "medienbildung.sachsen.de",
+        "www.medienbildung.sachsen.de"
+      ],
+      "seeds": [
+        "https://www.medienbildung.sachsen.de/"
+      ]
+    },
+    {
+      "source_id": "lasub_sachsen",
+      "priority": "P2",
+      "hosts": [
+        "lasub.smk.sachsen.de",
+        "www.lasub.smk.sachsen.de"
+      ],
+      "seeds": [
+        "https://www.lasub.smk.sachsen.de/"
+      ]
+    },
+    {
+      "source_id": "lisa_sachsen_anhalt",
+      "priority": "P1",
+      "hosts": [
+        "lisa.sachsen-anhalt.de"
+      ],
+      "seeds": [
+        "https://lisa.sachsen-anhalt.de/"
+      ]
+    },
+    {
+      "source_id": "iqsh_sh",
+      "priority": "P0",
+      "hosts": [
+        "iqsh.de",
+        "www.iqsh.de"
+      ],
+      "seeds": [
+        "https://www.iqsh.de/"
+      ]
+    },
+    {
+      "source_id": "fachportal_lernnetz_sh",
+      "priority": "P1",
+      "hosts": [
+        "fachportal.lernnetz.de"
+      ],
+      "seeds": [
+        "https://fachportal.lernnetz.de/sh/"
+      ]
+    },
+    {
+      "source_id": "bildung_schleswig_holstein",
+      "priority": "P1",
+      "hosts": [
+        "schleswig-holstein.de",
+        "www.schleswig-holstein.de"
+      ],
+      "seeds": [
+        "https://www.schleswig-holstein.de/DE/fachinhalte/B/bildung/bildung_node.html"
+      ]
+    },
+    {
+      "source_id": "schulportal_thueringen",
+      "priority": "P0",
+      "hosts": [
+        "schulportal-thueringen.de",
+        "www.schulportal-thueringen.de"
+      ],
+      "seeds": [
+        "https://www.schulportal-thueringen.de/"
+      ]
+    },
+    {
+      "source_id": "thillm",
+      "priority": "P1",
+      "hosts": [
+        "thillm.de",
+        "www.thillm.de"
+      ],
+      "seeds": [
+        "https://www.thillm.de/"
+      ]
+    },
+    {
+      "source_id": "bildung_thueringen",
+      "priority": "P1",
+      "hosts": [
+        "bildung.thueringen.de"
+      ],
+      "seeds": [
+        "https://bildung.thueringen.de/"
+      ]
+    },
+    {
+      "source_id": "kmk",
+      "priority": "P0",
+      "hosts": [
+        "kmk.org",
+        "www.kmk.org"
+      ],
+      "seeds": [
+        "https://www.kmk.org/"
+      ]
+    },
+    {
+      "source_id": "oerinfo",
+      "priority": "P1",
+      "hosts": [
+        "open-educational-resources.de"
+      ],
+      "seeds": [
+        "https://open-educational-resources.de/"
+      ]
+    },
+    {
+      "source_id": "wirlernenonline",
+      "priority": "P1",
+      "hosts": [
+        "wirlernenonline.de",
+        "www.wirlernenonline.de"
+      ],
+      "seeds": [
+        "https://wirlernenonline.de/"
+      ]
+    },
+    {
+      "source_id": "e_teaching",
+      "priority": "P1",
+      "hosts": [
+        "e-teaching.org",
+        "www.e-teaching.org"
+      ],
+      "seeds": [
+        "https://www.e-teaching.org/"
+      ]
+    },
+    {
+      "source_id": "lehrer_online",
+      "priority": "P1",
+      "hosts": [
+        "lehrer-online.de",
+        "www.lehrer-online.de"
+      ],
+      "seeds": [
+        "https://www.lehrer-online.de/"
+      ]
+    },
+    {
+      "source_id": "gesellschaft_fuer_informatik",
+      "priority": "P0",
+      "hosts": [
+        "gi.de",
+        "www.gi.de"
+      ],
+      "seeds": [
+        "https://www.gi.de/"
+      ]
+    },
+    {
+      "source_id": "cs_unplugged",
+      "priority": "P1",
+      "hosts": [
+        "csunplugged.org",
+        "www.csunplugged.org"
+      ],
+      "seeds": [
+        "https://www.csunplugged.org/de/"
+      ]
+    },
+    {
+      "source_id": "calliope",
+      "priority": "P1",
+      "hosts": [
+        "calliope.cc",
+        "www.calliope.cc"
+      ],
+      "seeds": [
+        "https://calliope.cc/"
+      ]
+    },
+    {
+      "source_id": "coding_for_tomorrow",
+      "priority": "P1",
+      "hosts": [
+        "coding-for-tomorrow.de",
+        "www.coding-for-tomorrow.de"
+      ],
+      "seeds": [
+        "https://www.coding-for-tomorrow.de/"
+      ]
+    },
+    {
+      "source_id": "appcamps",
+      "priority": "P2",
+      "hosts": [
+        "appcamps.de",
+        "www.appcamps.de"
+      ],
+      "seeds": [
+        "https://appcamps.de/"
+      ]
+    },
+    {
+      "source_id": "ki_macht_schule",
+      "priority": "P1",
+      "hosts": [
+        "ki-macht-schule.de",
+        "www.ki-macht-schule.de"
+      ],
+      "seeds": [
+        "https://ki-macht-schule.de/"
+      ]
+    },
+    {
+      "source_id": "handysektor",
+      "priority": "P1",
+      "hosts": [
+        "handysektor.de",
+        "www.handysektor.de"
+      ],
+      "seeds": [
+        "https://www.handysektor.de/"
+      ]
+    },
+    {
+      "source_id": "mediaculture_online",
+      "priority": "P1",
+      "hosts": [
+        "mediaculture-online.de",
+        "www.mediaculture-online.de"
+      ],
+      "seeds": [
+        "https://www.mediaculture-online.de/"
+      ]
+    },
+    {
+      "source_id": "gmk",
+      "priority": "P2",
+      "hosts": [
+        "gmk-net.de",
+        "www.gmk-net.de"
+      ],
+      "seeds": [
+        "https://www.gmk-net.de/"
+      ]
+    },
+    {
+      "source_id": "dguv_lug",
+      "priority": "P2",
+      "hosts": [
+        "dguv-lug.de",
+        "www.dguv-lug.de"
+      ],
+      "seeds": [
+        "https://www.dguv-lug.de/"
+      ]
+    },
+    {
+      "source_id": "mint_ec",
+      "priority": "P2",
+      "hosts": [
+        "mint-ec.de",
+        "www.mint-ec.de"
+      ],
+      "seeds": [
+        "https://www.mint-ec.de/"
+      ]
+    },
+    {
+      "source_id": "schule_at",
+      "priority": "P1",
+      "hosts": [
+        "schule.at",
+        "www.schule.at"
+      ],
+      "seeds": [
+        "https://www.schule.at/"
+      ]
+    },
+    {
+      "source_id": "eeducation_at",
+      "priority": "P1",
+      "hosts": [
+        "eeducation.at",
+        "www.eeducation.at"
+      ],
+      "seeds": [
+        "https://eeducation.at/"
+      ]
+    },
+    {
+      "source_id": "saferinternet_at",
+      "priority": "P1",
+      "hosts": [
+        "saferinternet.at",
+        "www.saferinternet.at"
+      ],
+      "seeds": [
+        "https://www.saferinternet.at/"
+      ]
+    },
+    {
+      "source_id": "virtuelle_ph",
+      "priority": "P2",
+      "hosts": [
+        "virtuelle-ph.at",
+        "www.virtuelle-ph.at"
+      ],
+      "seeds": [
+        "https://www.virtuelle-ph.at/"
+      ]
+    },
+    {
+      "source_id": "lehrplan21",
+      "priority": "P1",
+      "hosts": [
+        "lehrplan21.ch",
+        "www.lehrplan21.ch"
+      ],
+      "seeds": [
+        "https://www.lehrplan21.ch/"
+      ]
+    },
+    {
+      "source_id": "edk_ch",
+      "priority": "P2",
+      "hosts": [
+        "edk.ch",
+        "www.edk.ch"
+      ],
+      "seeds": [
+        "https://www.edk.ch/"
+      ]
+    },
+    {
+      "source_id": "phzh",
+      "priority": "P2",
+      "hosts": [
+        "phzh.ch",
+        "www.phzh.ch"
+      ],
+      "seeds": [
+        "https://phzh.ch/"
+      ]
+    },
+    {
+      "source_id": "script_luxemburg",
+      "priority": "P2",
+      "hosts": [
+        "script.lu",
+        "www.script.lu"
+      ],
+      "seeds": [
+        "https://script.lu/"
+      ]
+    },
+    {
+      "source_id": "kennisnet",
+      "priority": "P1",
+      "hosts": [
+        "kennisnet.nl",
+        "www.kennisnet.nl"
+      ],
+      "seeds": [
+        "https://www.kennisnet.nl/"
+      ]
+    },
+    {
+      "source_id": "slo_niederlande",
+      "priority": "P2",
+      "hosts": [
+        "slo.nl",
+        "www.slo.nl"
+      ],
+      "seeds": [
+        "https://www.slo.nl/"
+      ]
+    },
+    {
+      "source_id": "mediawijzer",
+      "priority": "P1",
+      "hosts": [
+        "mediawijzer.net",
+        "www.mediawijzer.net"
+      ],
+      "seeds": [
+        "https://www.mediawijzer.net/"
+      ]
+    },
+    {
+      "source_id": "klascement",
+      "priority": "P1",
+      "hosts": [
+        "klascement.net",
+        "www.klascement.net"
+      ],
+      "seeds": [
+        "https://www.klascement.net/"
+      ]
+    },
+    {
+      "source_id": "mediawijs_be",
+      "priority": "P1",
+      "hosts": [
+        "mediawijs.be",
+        "www.mediawijs.be"
+      ],
+      "seeds": [
+        "https://www.mediawijs.be/"
+      ]
+    },
+    {
+      "source_id": "eduscol",
+      "priority": "P1",
+      "hosts": [
+        "eduscol.education.fr"
+      ],
+      "seeds": [
+        "https://eduscol.education.fr/"
+      ]
+    },
+    {
+      "source_id": "reseau_canope",
+      "priority": "P1",
+      "hosts": [
+        "reseau-canope.fr",
+        "www.reseau-canope.fr"
+      ],
+      "seeds": [
+        "https://www.reseau-canope.fr/"
+      ]
+    },
+    {
+      "source_id": "clemi",
+      "priority": "P1",
+      "hosts": [
+        "clemi.fr",
+        "www.clemi.fr"
+      ],
+      "seeds": [
+        "https://www.clemi.fr/"
+      ]
+    },
+    {
+      "source_id": "classcode",
+      "priority": "P2",
+      "hosts": [
+        "classcode.fr",
+        "www.classcode.fr"
+      ],
+      "seeds": [
+        "https://classcode.fr/"
+      ]
+    },
+    {
+      "source_id": "teach_computing_uk",
+      "priority": "P1",
+      "hosts": [
+        "teachcomputing.org",
+        "www.teachcomputing.org"
+      ],
+      "seeds": [
+        "https://teachcomputing.org/"
+      ]
+    },
+    {
+      "source_id": "stem_learning_uk",
+      "priority": "P1",
+      "hosts": [
+        "stem.org.uk",
+        "www.stem.org.uk"
+      ],
+      "seeds": [
+        "https://www.stem.org.uk/"
+      ]
+    },
+    {
+      "source_id": "computing_at_school",
+      "priority": "P1",
+      "hosts": [
+        "computingatschool.org.uk",
+        "www.computingatschool.org.uk"
+      ],
+      "seeds": [
+        "https://www.computingatschool.org.uk/"
+      ]
+    },
+    {
+      "source_id": "webwise_ie",
+      "priority": "P1",
+      "hosts": [
+        "webwise.ie",
+        "www.webwise.ie"
+      ],
+      "seeds": [
+        "https://www.webwise.ie/"
+      ]
+    },
+    {
+      "source_id": "emu_daenemark",
+      "priority": "P1",
+      "hosts": [
+        "emu.dk",
+        "www.emu.dk"
+      ],
+      "seeds": [
+        "https://emu.dk/"
+      ]
+    },
+    {
+      "source_id": "oph_finnland",
+      "priority": "P1",
+      "hosts": [
+        "oph.fi",
+        "www.oph.fi"
+      ],
+      "seeds": [
+        "https://www.oph.fi/en"
+      ]
+    },
+    {
+      "source_id": "kavi_finnland",
+      "priority": "P1",
+      "hosts": [
+        "kavi.fi",
+        "www.kavi.fi"
+      ],
+      "seeds": [
+        "https://kavi.fi/en/media-education/"
+      ]
+    },
+    {
+      "source_id": "skolverket_schweden",
+      "priority": "P1",
+      "hosts": [
+        "skolverket.se",
+        "www.skolverket.se"
+      ],
+      "seeds": [
+        "https://www.skolverket.se/"
+      ]
+    },
+    {
+      "source_id": "digitala_lektioner",
+      "priority": "P1",
+      "hosts": [
+        "digitalalektioner.se",
+        "www.digitalalektioner.se"
+      ],
+      "seeds": [
+        "https://digitalalektioner.se/"
+      ]
+    },
+    {
+      "source_id": "udir_norwegen",
+      "priority": "P1",
+      "hosts": [
+        "udir.no",
+        "www.udir.no"
+      ],
+      "seeds": [
+        "https://www.udir.no/"
+      ]
+    },
+    {
+      "source_id": "e_koolikott_estland",
+      "priority": "P2",
+      "hosts": [
+        "e-koolikott.ee"
+      ],
+      "seeds": [
+        "https://e-koolikott.ee/"
+      ]
+    },
+    {
+      "source_id": "zpe_polen",
+      "priority": "P2",
+      "hosts": [
+        "zpe.gov.pl"
+      ],
+      "seeds": [
+        "https://zpe.gov.pl/"
+      ]
+    },
+    {
+      "source_id": "ore_polen",
+      "priority": "P2",
+      "hosts": [
+        "ore.edu.pl",
+        "www.ore.edu.pl"
+      ],
+      "seeds": [
+        "https://www.ore.edu.pl/"
+      ]
+    },
+    {
+      "source_id": "edu_cz",
+      "priority": "P2",
+      "hosts": [
+        "edu.cz",
+        "www.edu.cz"
+      ],
+      "seeds": [
+        "https://www.edu.cz/"
+      ]
+    },
+    {
+      "source_id": "revize_cz",
+      "priority": "P2",
+      "hosts": [
+        "revize.edu.cz"
+      ],
+      "seeds": [
+        "https://revize.edu.cz/"
+      ]
+    },
+    {
+      "source_id": "indire_italien",
+      "priority": "P2",
+      "hosts": [
+        "indire.it",
+        "www.indire.it"
+      ],
+      "seeds": [
+        "https://www.indire.it/"
+      ]
+    },
+    {
+      "source_id": "programmailfuturo",
+      "priority": "P2",
+      "hosts": [
+        "programmailfuturo.it"
+      ],
+      "seeds": [
+        "https://programmailfuturo.it/"
+      ]
+    },
+    {
+      "source_id": "intef_spanien",
+      "priority": "P1",
+      "hosts": [
+        "intef.es",
+        "www.intef.es"
+      ],
+      "seeds": [
+        "https://intef.es/"
+      ]
+    },
+    {
+      "source_id": "code_intef",
+      "priority": "P2",
+      "hosts": [
+        "code.intef.es"
+      ],
+      "seeds": [
+        "https://code.intef.es/"
+      ]
+    },
+    {
+      "source_id": "seguranet_portugal",
+      "priority": "P2",
+      "hosts": [
+        "seguranet.pt",
+        "www.seguranet.pt"
+      ],
+      "seeds": [
+        "https://www.seguranet.pt/"
+      ]
+    },
+    {
+      "source_id": "european_school_education",
+      "priority": "P1",
+      "hosts": [
+        "school-education.ec.europa.eu"
+      ],
+      "seeds": [
+        "https://school-education.ec.europa.eu/"
+      ]
+    },
+    {
+      "source_id": "european_schoolnet",
+      "priority": "P1",
+      "hosts": [
+        "eun.org",
+        "www.eun.org"
+      ],
+      "seeds": [
+        "https://www.eun.org/"
+      ]
+    },
+    {
+      "source_id": "eu_code_week",
+      "priority": "P1",
+      "hosts": [
+        "codeweek.eu",
+        "www.codeweek.eu"
+      ],
+      "seeds": [
+        "https://codeweek.eu/"
+      ]
+    },
+    {
+      "source_id": "better_internet_for_kids",
+      "priority": "P1",
+      "hosts": [
+        "betterinternetforkids.europa.eu"
+      ],
+      "seeds": [
+        "https://betterinternetforkids.europa.eu/"
+      ]
+    },
+    {
+      "source_id": "unesco_digital_education",
+      "priority": "P2",
+      "hosts": [
+        "unesco.org",
+        "www.unesco.org"
+      ],
+      "seeds": [
+        "https://www.unesco.org/en/digital-education",
+        "https://www.unesco.org/en/media-information-literacy"
+      ]
+    },
+    {
+      "source_id": "council_of_europe_digital_citizenship",
+      "priority": "P2",
+      "hosts": [
+        "coe.int",
+        "www.coe.int"
+      ],
+      "seeds": [
+        "https://www.coe.int/en/web/education/digital-citizenship-education"
+      ]
+    },
+    {
+      "source_id": "csta",
+      "priority": "P1",
+      "hosts": [
+        "csteachers.org",
+        "www.csteachers.org"
+      ],
+      "seeds": [
+        "https://csteachers.org/"
+      ]
+    },
+    {
+      "source_id": "code_org",
+      "priority": "P1",
+      "hosts": [
+        "code.org",
+        "www.code.org"
+      ],
+      "seeds": [
+        "https://code.org/"
+      ]
+    },
+    {
+      "source_id": "scratch_educators",
+      "priority": "P1",
+      "hosts": [
+        "scratch.mit.edu"
+      ],
+      "seeds": [
+        "https://scratch.mit.edu/educators/"
+      ]
+    },
+    {
+      "source_id": "microbit_teach",
+      "priority": "P1",
+      "hosts": [
+        "microbit.org",
+        "www.microbit.org"
+      ],
+      "seeds": [
+        "https://microbit.org/teach/"
+      ]
+    },
+    {
+      "source_id": "raspberry_pi_teach",
+      "priority": "P1",
+      "hosts": [
+        "raspberrypi.org",
+        "www.raspberrypi.org"
+      ],
+      "seeds": [
+        "https://www.raspberrypi.org/teach/"
+      ]
+    },
+    {
+      "source_id": "khan_academy_computing",
+      "priority": "P2",
+      "hosts": [
+        "khanacademy.org",
+        "www.khanacademy.org"
+      ],
+      "seeds": [
+        "https://www.khanacademy.org/computing"
+      ]
+    },
+    {
+      "source_id": "oer_commons",
+      "priority": "P2",
+      "hosts": [
+        "oercommons.org",
+        "www.oercommons.org"
+      ],
+      "seeds": [
+        "https://www.oercommons.org/"
+      ]
+    },
+    {
+      "source_id": "mit_app_inventor",
+      "priority": "P2",
+      "hosts": [
+        "appinventor.mit.edu"
+      ],
+      "seeds": [
+        "https://appinventor.mit.edu/"
+      ]
+    },
+    {
+      "source_id": "wiki_allgemeine_didaktik",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Didaktik",
+        "https://de.wikipedia.org/wiki/Allgemeine_Didaktik",
+        "https://de.wikipedia.org/wiki/Didaktisches_Modell",
+        "https://de.wikipedia.org/wiki/Didaktische_Analyse",
+        "https://de.wikipedia.org/wiki/Didaktische_Reduktion",
+        "https://de.wikipedia.org/wiki/Didaktisches_Dreieck",
+        "https://de.wikipedia.org/wiki/Elementarisierung",
+        "https://de.wikipedia.org/wiki/Unterrichtsplanung",
+        "https://de.wikipedia.org/wiki/Unterrichtsprinzip",
+        "https://de.wikipedia.org/wiki/Kategorie:Didaktik"
+      ]
+    },
+    {
+      "source_id": "wiki_didaktische_modelle",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Bildungstheoretische_Didaktik",
+        "https://de.wikipedia.org/wiki/Lerntheoretische_Didaktik",
+        "https://de.wikipedia.org/wiki/Kritisch-konstruktive_Didaktik",
+        "https://de.wikipedia.org/wiki/Konstruktivistische_Didaktik",
+        "https://de.wikipedia.org/wiki/Handlungsorientierter_Unterricht",
+        "https://de.wikipedia.org/wiki/Problemorientierter_Unterricht",
+        "https://de.wikipedia.org/wiki/Projektunterricht",
+        "https://de.wikipedia.org/wiki/Offener_Unterricht",
+        "https://de.wikipedia.org/wiki/Entdeckendes_Lernen",
+        "https://de.wikipedia.org/wiki/Exemplarisches_Lernen"
+      ]
+    },
+    {
+      "source_id": "wiki_didaktische_prinzipien",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Schülerorientierung",
+        "https://de.wikipedia.org/wiki/Handlungsorientierung",
+        "https://de.wikipedia.org/wiki/Problemorientierung",
+        "https://de.wikipedia.org/wiki/Lebensweltorientierung",
+        "https://de.wikipedia.org/wiki/Kompetenzorientierung",
+        "https://de.wikipedia.org/wiki/Binnendifferenzierung",
+        "https://de.wikipedia.org/wiki/Individualisierung",
+        "https://de.wikipedia.org/wiki/Anschaulichkeit",
+        "https://de.wikipedia.org/wiki/Selbstgesteuertes_Lernen",
+        "https://de.wikipedia.org/wiki/Kooperatives_Lernen"
+      ]
+    },
+    {
+      "source_id": "wiki_unterrichtsmethoden",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Unterrichtsmethode",
+        "https://de.wikipedia.org/wiki/Frontalunterricht",
+        "https://de.wikipedia.org/wiki/Gruppenarbeit_(Didaktik)",
+        "https://de.wikipedia.org/wiki/Partnerarbeit",
+        "https://de.wikipedia.org/wiki/Stationenlernen",
+        "https://de.wikipedia.org/wiki/Wochenplanunterricht",
+        "https://de.wikipedia.org/wiki/Freiarbeit",
+        "https://de.wikipedia.org/wiki/Planspiel",
+        "https://de.wikipedia.org/wiki/Rollenspiel_(Pädagogik)",
+        "https://de.wikipedia.org/wiki/Fallstudie",
+        "https://de.wikipedia.org/wiki/Kategorie:Unterrichtsmethode"
+      ]
+    },
+    {
+      "source_id": "wiki_aktivierende_methoden",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Brainstorming",
+        "https://de.wikipedia.org/wiki/Mindmap",
+        "https://de.wikipedia.org/wiki/Concept-Map",
+        "https://de.wikipedia.org/wiki/Think-Pair-Share",
+        "https://de.wikipedia.org/wiki/Gruppenpuzzle",
+        "https://de.wikipedia.org/wiki/Lernen_durch_Lehren",
+        "https://de.wikipedia.org/wiki/Peer_Instruction",
+        "https://de.wikipedia.org/wiki/Flipped_Classroom",
+        "https://de.wikipedia.org/wiki/Problem-Based_Learning",
+        "https://de.wikipedia.org/wiki/Forschendes_Lernen"
+      ]
+    },
+    {
+      "source_id": "wiki_erziehungswissenschaft",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Erziehungswissenschaft",
+        "https://de.wikipedia.org/wiki/Pädagogik",
+        "https://de.wikipedia.org/wiki/Allgemeine_Pädagogik",
+        "https://de.wikipedia.org/wiki/Schulpädagogik",
+        "https://de.wikipedia.org/wiki/Sozialpädagogik",
+        "https://de.wikipedia.org/wiki/Sonderpädagogik",
+        "https://de.wikipedia.org/wiki/Medienpädagogik",
+        "https://de.wikipedia.org/wiki/Interkulturelle_Pädagogik",
+        "https://de.wikipedia.org/wiki/Reformpädagogik",
+        "https://de.wikipedia.org/wiki/Kategorie:Pädagogik"
+      ]
+    },
+    {
+      "source_id": "wiki_lerntheorien",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Lernen",
+        "https://de.wikipedia.org/wiki/Lerntheorie",
+        "https://de.wikipedia.org/wiki/Behaviorismus",
+        "https://de.wikipedia.org/wiki/Kognitivismus",
+        "https://de.wikipedia.org/wiki/Konstruktivismus_(Lernpsychologie)",
+        "https://de.wikipedia.org/wiki/Sozial-kognitive_Lerntheorie",
+        "https://de.wikipedia.org/wiki/Modelllernen",
+        "https://de.wikipedia.org/wiki/Situiertes_Lernen",
+        "https://de.wikipedia.org/wiki/Metakognition",
+        "https://de.wikipedia.org/wiki/Lernmotivation"
+      ]
+    },
+    {
+      "source_id": "wiki_diagnostik_und_leistung",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Pädagogische_Diagnostik",
+        "https://de.wikipedia.org/wiki/Leistungsbeurteilung_(Schule)",
+        "https://de.wikipedia.org/wiki/Lernstandserhebung",
+        "https://de.wikipedia.org/wiki/Feedback_(Kommunikation)",
+        "https://de.wikipedia.org/wiki/Formative_Evaluation",
+        "https://de.wikipedia.org/wiki/Summative_Evaluation",
+        "https://de.wikipedia.org/wiki/Portfolio_(Pädagogik)",
+        "https://de.wikipedia.org/wiki/Kompetenzmodell",
+        "https://de.wikipedia.org/wiki/Bildungsstandard",
+        "https://de.wikipedia.org/wiki/Lernziel"
+      ]
+    },
+    {
+      "source_id": "wiki_inklusion_und_heterogenitaet",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Inklusive_Pädagogik",
+        "https://de.wikipedia.org/wiki/Inklusion_(Pädagogik)",
+        "https://de.wikipedia.org/wiki/Heterogenität_(Pädagogik)",
+        "https://de.wikipedia.org/wiki/Differenzierung_(Didaktik)",
+        "https://de.wikipedia.org/wiki/Individualisiertes_Lernen",
+        "https://de.wikipedia.org/wiki/Universal_Design_for_Learning",
+        "https://de.wikipedia.org/wiki/Begabtenförderung",
+        "https://de.wikipedia.org/wiki/Lernschwierigkeit",
+        "https://de.wikipedia.org/wiki/Chancengleichheit",
+        "https://de.wikipedia.org/wiki/Bildungsgerechtigkeit"
+      ]
+    },
+    {
+      "source_id": "wiki_geschichtsdidaktik",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Geschichtsdidaktik",
+        "https://de.wikipedia.org/wiki/Geschichtsunterricht",
+        "https://de.wikipedia.org/wiki/Geschichtsbewusstsein",
+        "https://de.wikipedia.org/wiki/Geschichtskultur",
+        "https://de.wikipedia.org/wiki/Geschichtspolitik",
+        "https://de.wikipedia.org/wiki/Erinnerungskultur",
+        "https://de.wikipedia.org/wiki/Public_History",
+        "https://de.wikipedia.org/wiki/Geschichtsvermittlung",
+        "https://de.wikipedia.org/wiki/Multiperspektivität",
+        "https://de.wikipedia.org/wiki/Historisches_Lernen"
+      ]
+    },
+    {
+      "source_id": "wiki_historische_methoden",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Quellenkritik",
+        "https://de.wikipedia.org/wiki/Historische_Methode",
+        "https://de.wikipedia.org/wiki/Historische_Quelle",
+        "https://de.wikipedia.org/wiki/Hermeneutik",
+        "https://de.wikipedia.org/wiki/Oral_History",
+        "https://de.wikipedia.org/wiki/Zeitzeugenbefragung",
+        "https://de.wikipedia.org/wiki/Archivpädagogik",
+        "https://de.wikipedia.org/wiki/Museumspädagogik",
+        "https://de.wikipedia.org/wiki/Regionalgeschichte",
+        "https://de.wikipedia.org/wiki/Lokalgeschichte"
+      ]
+    },
+    {
+      "source_id": "wiki_informatikdidaktik",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Informatikdidaktik",
+        "https://de.wikipedia.org/wiki/Informatikunterricht",
+        "https://de.wikipedia.org/wiki/Informatikbildung",
+        "https://de.wikipedia.org/wiki/Informatische_Bildung",
+        "https://de.wikipedia.org/wiki/Computational_Thinking",
+        "https://de.wikipedia.org/wiki/Algorithmisches_Denken",
+        "https://de.wikipedia.org/wiki/Medienkompetenz",
+        "https://de.wikipedia.org/wiki/Digitale_Bildung",
+        "https://de.wikipedia.org/wiki/Programmierunterricht",
+        "https://de.wikipedia.org/wiki/Kategorie:Informatikdidaktik"
+      ]
+    },
+    {
+      "source_id": "wiki_informatikunterricht_methoden",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Visuelle_Programmiersprache",
+        "https://de.wikipedia.org/wiki/Blockbasierte_Programmierung",
+        "https://de.wikipedia.org/wiki/Scratch_(Programmiersprache)",
+        "https://de.wikipedia.org/wiki/Logo_(Programmiersprache)",
+        "https://de.wikipedia.org/wiki/Pair_Programming",
+        "https://de.wikipedia.org/wiki/Unplugged_Computing",
+        "https://de.wikipedia.org/wiki/Robotik",
+        "https://de.wikipedia.org/wiki/Algorithmus",
+        "https://de.wikipedia.org/wiki/Endlicher_Automat",
+        "https://de.wikipedia.org/wiki/Datenmodellierung"
+      ]
+    },
+    {
+      "source_id": "wiki_sprachdidaktik",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Deutschdidaktik",
+        "https://de.wikipedia.org/wiki/Sprachdidaktik",
+        "https://de.wikipedia.org/wiki/Fremdsprachendidaktik",
+        "https://de.wikipedia.org/wiki/Lesedidaktik",
+        "https://de.wikipedia.org/wiki/Schreibdidaktik",
+        "https://de.wikipedia.org/wiki/Literaturdidaktik",
+        "https://de.wikipedia.org/wiki/Sprachförderung",
+        "https://de.wikipedia.org/wiki/Lesekompetenz",
+        "https://de.wikipedia.org/wiki/Mehrsprachigkeit",
+        "https://de.wikipedia.org/wiki/Sprachbewusstheit"
+      ]
+    },
+    {
+      "source_id": "wiki_mathematikdidaktik",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Mathematikdidaktik",
+        "https://de.wikipedia.org/wiki/Mathematikunterricht",
+        "https://de.wikipedia.org/wiki/Problemlösen",
+        "https://de.wikipedia.org/wiki/Mathematische_Modellierung",
+        "https://de.wikipedia.org/wiki/Heuristik",
+        "https://de.wikipedia.org/wiki/Beweis_(Mathematik)",
+        "https://de.wikipedia.org/wiki/Geometrieunterricht",
+        "https://de.wikipedia.org/wiki/Rechenschwäche",
+        "https://de.wikipedia.org/wiki/Zahlenverständnis",
+        "https://de.wikipedia.org/wiki/Kategorie:Mathematikdidaktik"
+      ]
+    },
+    {
+      "source_id": "wiki_naturwissenschaftsdidaktik",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Naturwissenschaftsdidaktik",
+        "https://de.wikipedia.org/wiki/Physikdidaktik",
+        "https://de.wikipedia.org/wiki/Chemiedidaktik",
+        "https://de.wikipedia.org/wiki/Biologiedidaktik",
+        "https://de.wikipedia.org/wiki/Experiment",
+        "https://de.wikipedia.org/wiki/Schülerversuch",
+        "https://de.wikipedia.org/wiki/Modellbildung",
+        "https://de.wikipedia.org/wiki/Forschend-entdeckendes_Lernen",
+        "https://de.wikipedia.org/wiki/Scientific_Literacy",
+        "https://de.wikipedia.org/wiki/Konzeptwechsel"
+      ]
+    },
+    {
+      "source_id": "wiki_gesellschaftswissenschaftsdidaktik",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Politikdidaktik",
+        "https://de.wikipedia.org/wiki/Geographiedidaktik",
+        "https://de.wikipedia.org/wiki/Religionsdidaktik",
+        "https://de.wikipedia.org/wiki/Ethikunterricht",
+        "https://de.wikipedia.org/wiki/Politische_Bildung",
+        "https://de.wikipedia.org/wiki/Demokratiepädagogik",
+        "https://de.wikipedia.org/wiki/Beutelsbacher_Konsens",
+        "https://de.wikipedia.org/wiki/Kontroversitätsgebot",
+        "https://de.wikipedia.org/wiki/Bildung_für_nachhaltige_Entwicklung",
+        "https://de.wikipedia.org/wiki/Globales_Lernen"
+      ]
+    },
+    {
+      "source_id": "wiki_kunst_musik_sport_didaktik",
+      "priority": "P2",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Kunstdidaktik",
+        "https://de.wikipedia.org/wiki/Musikdidaktik",
+        "https://de.wikipedia.org/wiki/Sportdidaktik",
+        "https://de.wikipedia.org/wiki/Kunstpädagogik",
+        "https://de.wikipedia.org/wiki/Musikpädagogik",
+        "https://de.wikipedia.org/wiki/Sportpädagogik",
+        "https://de.wikipedia.org/wiki/Ästhetische_Bildung",
+        "https://de.wikipedia.org/wiki/Bewegungserziehung",
+        "https://de.wikipedia.org/wiki/Rhythmik_(Pädagogik)",
+        "https://de.wikipedia.org/wiki/Erlebnispädagogik"
+      ]
+    },
+    {
+      "source_id": "wiki_mediendidaktik",
+      "priority": "P0",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Mediendidaktik",
+        "https://de.wikipedia.org/wiki/Medienbildung",
+        "https://de.wikipedia.org/wiki/E-Learning",
+        "https://de.wikipedia.org/wiki/Blended_Learning",
+        "https://de.wikipedia.org/wiki/Mobile_Learning",
+        "https://de.wikipedia.org/wiki/Game-Based_Learning",
+        "https://de.wikipedia.org/wiki/Gamification",
+        "https://de.wikipedia.org/wiki/Lernplattform",
+        "https://de.wikipedia.org/wiki/Lernmanagementsystem",
+        "https://de.wikipedia.org/wiki/Open_Educational_Resources"
+      ]
+    },
+    {
+      "source_id": "wiki_ki_bildung",
+      "priority": "P1",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Künstliche_Intelligenz",
+        "https://de.wikipedia.org/wiki/Intelligentes_Tutorielles_System",
+        "https://de.wikipedia.org/wiki/Adaptives_Lernen",
+        "https://de.wikipedia.org/wiki/Learning_Analytics",
+        "https://de.wikipedia.org/wiki/Digital_Literacy",
+        "https://de.wikipedia.org/wiki/Informationskompetenz",
+        "https://de.wikipedia.org/wiki/Medienkritik",
+        "https://de.wikipedia.org/wiki/Desinformation",
+        "https://de.wikipedia.org/wiki/Algorithmische_Verzerrung",
+        "https://de.wikipedia.org/wiki/Digitale_Kompetenz"
+      ]
+    },
+    {
+      "source_id": "wiki_bildungstheorien",
+      "priority": "P2",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Bildung_(Pädagogik)",
+        "https://de.wikipedia.org/wiki/Bildungstheorie",
+        "https://de.wikipedia.org/wiki/Humboldtsches_Bildungsideal",
+        "https://de.wikipedia.org/wiki/John_Dewey",
+        "https://de.wikipedia.org/wiki/Maria_Montessori",
+        "https://de.wikipedia.org/wiki/Johann_Heinrich_Pestalozzi",
+        "https://de.wikipedia.org/wiki/Wolfgang_Klafki",
+        "https://de.wikipedia.org/wiki/Jean_Piaget",
+        "https://de.wikipedia.org/wiki/Lew_Wygotski",
+        "https://de.wikipedia.org/wiki/Jerome_Bruner"
+      ]
+    },
+    {
+      "source_id": "wiki_bildungsforschung",
+      "priority": "P2",
+      "hosts": [
+        "de.wikipedia.org"
+      ],
+      "seeds": [
+        "https://de.wikipedia.org/wiki/Bildungsforschung",
+        "https://de.wikipedia.org/wiki/Empirische_Bildungsforschung",
+        "https://de.wikipedia.org/wiki/Unterrichtsforschung",
+        "https://de.wikipedia.org/wiki/Lehr-Lern-Forschung",
+        "https://de.wikipedia.org/wiki/Bildungsmonitoring",
+        "https://de.wikipedia.org/wiki/PISA-Studien",
+        "https://de.wikipedia.org/wiki/John_Hattie",
+        "https://de.wikipedia.org/wiki/Visible_Learning",
+        "https://de.wikipedia.org/wiki/Schulqualität",
+        "https://de.wikipedia.org/wiki/Unterrichtsqualität"
+      ]
+    }
+  ],
+  "site_license": {
+    "segu-geschichte.de": "CC BY-SA 4.0",
+    "www.segu-geschichte.de": "CC BY-SA 4.0"
+  }
+}

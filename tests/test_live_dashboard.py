@@ -45,6 +45,7 @@ class LiveDashboardTests(unittest.TestCase):
                            [('https://a.test/seed',2),('https://b.test/seed',1)])
             db.executemany('INSERT INTO crawl_depth_stats VALUES (?,?,?,?)', [
                 ('a.test',0,'done',1),('a.test',1,'done',1),('b.test',0,'error',1)])
+        db.close()
         (self.run / 'crawler_live.json').write_text(
             json.dumps({'run':self.run.name,'updated_at':'2026-11-11T12:34:00Z',
                         'document_bytes':31215}), encoding='utf-8')
